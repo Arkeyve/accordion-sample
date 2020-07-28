@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Accordion</title>
+
+  <style type="text/css">
+    html,
+    body {
+      margin: 0px;
+      height: 100%;
+      font-family: Arial;
+      font-size: 14px;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: #009a44;
+      height: 5vh;
+      vertical-align: middle;
+      color: #eee;
+      line-height: 5vh;
+      padding: 0px 10px 0px 10px;
+    }
+
+    .left-nav {
+      height: 100%;
+      width: 20%;
+      position: fixed;
+      left: 0;
+      padding: 0.5%;
+      border-right: none;
+    }
+
+    .accordion-container {
+      height: 100%;
+      width: 78%;
+      position: fixed;
+      left: 21%;
+      padding: 0.5%;
+    }
+
+    .divtable {
+      width: 100%;
+      display: table;
+    }
+
+    .divtr {
+      display: table-row;
+      width: 100%;
+    }
+
+    .divtd {
+      display: table-cell;
+      width: auto;
+    }
+
+    .panel-container {
+      /* display: table-row; */
+    }
+
+    .section {
+      background-color: #e7f6cf;
+      height: 5vh;
+      border: 1px solid #009a44;
+      font-weight: bold;
+      /* border-bottom: 5px solid #008080; */
+      /* border-image: linear-gradient(to right, #008080ff 10%, #00808000 10%);
+      border-image-slice: 1; */
+      vertical-align: middle;
+      text-align: center;
+      color: #000;
+      transition: 0.4s;
+      margin: 2px 0px 2px 0px;
+    }
+
+    .section:hover,
+    .active {
+      background-color: #009a44;
+      color: #eee;
+      /* border-bottom: 5px solid #005050; */
+      /* border-image: linear-gradient(to right, #008080ff 100%, #00808000 100%);
+      border-image-slice: 1; */
+    }
+
+    .panel {
+      width: 100%;
+      border: none;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .text-input {
+      width: 98%;
+      border: none;
+      height: 3vh;
+      border-bottom: 2px solid #008080;
+      transition: 0.4s;
+    }
+
+    .text-input:hover {
+      border-color: #005050;
+    }
+
+    .input-btn {
+      background-color: #eff0f2;
+      border: 1px solid #999;
+      border-radius: 5px;
+      height: 2em;
+      color: #000;
+      font-weight: bold;
+      min-width: 20%;
+      transition: 0.4s;
+      float: right;
+      margin: 2px;
+    }
+
+    .input-btn:hover {
+      background-color: #005050;
+    }
+
+    .select-btn {
+      width: 100%;
+      height: 2em;
+      border-radius: 5px;
+      border: 1px solid #999;
+    }
+
+    .cstmbx-1 {
+      border: 2px solid #268a10;
+      padding: 0.5em;
+    }
+
+    .cstmpr-1 {
+      font-weight: bold;
+      color: #446016;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    tr:nth-child(even) {
+      background-color: #d9e7cd;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #eef4e8;
+    }
+
+    th {
+      font-weight: bold;
+      color: #eee;
+      background-color: #86bc26;
+      padding: 0.5em;
+      text-align: left;
+    }
+
+    td {
+      padding: 0.5em;
+    }
+
+    .red {
+      background-color: #f00;
+      color: #eee;
+    }
+
+    .white {
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <strong>Header</strong>
+    </div>
+    <div class="left-nav">
+      <strong>Radio 1 Title</strong><br />
+      <input type="radio" name="radio1" id="radioid1" value=""><label for="radioid1">Radio 1</label>
+      <br /><br />
+      <strong>Radio 2 Title</strong><br />
+      <input type="radio" name="radio2" id="radioid2" value=""><label for="radioid2">Radio 2</label>
+      <br /><br />
+      <strong>Dropdown 1 Title</strong><br />
+      <select class="select-btn">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+      </select>
+      <br /><br />
+      <strong>Radio 3 Title</strong><br />
+      <input type="radio" name="radio3" id="radioid3" value=""><label for="radioid3">Radio 3</label>
+      <input type="radio" name="radio3" id="radioid4" value=""><label for="radioid4">Radio 4</label>
+      <input type="radio" name="radio3" id="radioid5" value=""><label for="radioid5">Radio 5</label>
+      <input type="radio" name="radio3" id="radioid6" value=""><label for="radioid6">Radio 6</label>
+      <br /><br />
+      <strong>Dropdown 2 Title</strong><br />
+      <select class="select-btn">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+      </select>
+      <br /><br />
+      <strong>Dropdown 3 Title</strong><br />
+      <select class="select-btn">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+      </select>
+      <br /><br />
+      <input type="button" name="" value="Button 1" class="input-btn">
+      <input type="button" name="" value="Button 2" class="input-btn">
+    </div>
+    <div class="accordion-container">
+      <div class="divtable">
+        <div class="divtr">
+          <div class="section divtd active">Section Header</div>
+          <div class="section divtd">Section Header</div>
+          <div class="section divtd">Section Header</div>
+        </div>
+      </div>
+      <br />
+      <div class="panel-container">
+        <div class="panel">
+          <div class="cstmbx-1 cstmpr-1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br />
+            <br />
+            - List Item 1<br />
+            - List Item 2
+          </div>
+          <h3>Heading Level 3</h3>
+          <table>
+            <tr>
+              <th>Heading 1</th>
+              <th>Heading 2</th>
+              <th>Heading 3</th>
+              <th>Heading 4</th>
+            </tr>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+          </table>
+          <h3>Heading Level 3</h3>
+          <div class="cstmpr-1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="panel">
+          <div class="divtable">
+            <div class="divtr">
+              <div class="divtd">
+                <table>
+                  <tr>
+                    <th class="red">Heading 1</th>
+                  </tr>
+                  <tr>
+                    <td class="white">
+                      <strong>Bold Text</strong>
+                      <br />
+                      <ul type="square">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="divtd">
+                <table>
+                  <tr>
+                    <th>Heading 1</th>
+                  </tr>
+                  <tr>
+                    <td class="white">
+                      <strong>Bold Text</strong>
+                      <br />
+                      <ul type="square">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <br /><br />
+          <table>
+            <tr>
+              <th>Heading 1</th>
+              <th>Heading 2</th>
+              <th>Heading 3</th>
+              <th>Heading 4</th>
+            </tr>
+            <tr>
+              <td class="white">Data 1</td>
+              <td class="white">Data 2</td>
+              <td class="white">Data 3</td>
+              <td class="white">Data 4</td>
+            </tr>
+          </table>
+          <br><br>
+          <table>
+            <tr>
+              <th colspan="2">Heading 1</th>
+            </tr>
+            <tr>
+              <td class="white">
+                <strong>Bold Text</strong>
+                <br />
+                <ul type="square">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                </ul>
+              </td>
+              <td class="white">
+                <strong>Bold Text</strong>
+                <br />
+                <ul type="square">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="panel">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var sections = document.getElementsByClassName("section");
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].addEventListener("click", function() {
+        var j;
+        var panelIndex = -1;
+
+        var allSections = document.getElementsByClassName("section");
+        for (j = 0; j < allSections.length; j++) {
+          if (this === allSections[j]) {
+            panelIndex = j;
+          }
+        }
+
+        var activeSections = document.getElementsByClassName("active");
+        for (j = 0; j < activeSections.length; j++) {
+          activeSections[j].classList.remove("active");
+        }
+        this.classList.add("active");
+
+        var allPanels = document.getElementsByClassName("panel");
+        var panel = allPanels[panelIndex];
+        for (j = 0; j < allPanels.length; j++) {
+          if (allPanels[j] !== panel) {
+            allPanels[j].style.maxHeight = null;
+            allPanels[j].style.opacity = 0;
+          }
+        }
+
+        if (panel.style.maxHeight) {
+          this.classList.remove("active");
+          panel.style.maxHeight = null;
+          panel.style.opacity = 0;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.style.opacity = 1;
+        }
+      });
+    }
+    document.getElementsByClassName("panel")[0].style.maxHeight = document.getElementsByClassName("panel")[0].scrollHeight + "px";
+    document.getElementsByClassName("panel")[0].style.opacity = 1;
+  </script>
+
+</body>
+
+</html>
