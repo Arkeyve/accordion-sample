@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="inrtl-html" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Accordion</title>
+
+  <style type="text/css">
+    html.inrtl-html,
+    body.inrtl-body {
+      margin: 0px;
+      height: 100%;
+      font-family: Arial;
+      font-size: 14px;
+    }
+
+    .inrtl-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .inrtl-accordion-container {
+      height: 100%;
+      padding: 0em 1em 0em 1em;
+    }
+
+    .inrtl-divtable {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+    }
+
+    .inrtl-divtr {
+      display: table-row;
+      width: 100%;
+    }
+
+    .inrtl-divtd {
+      display: table-cell;
+      width: 100px;
+    }
+
+    .inrtl-panel-container {
+      padding: 0em 5em 0em 5em;
+    }
+
+    .inrtl-section {
+      background-color: rgb(16, 37, 54);
+      height: 5em;
+      font-size: 2em;
+      font-weight: bold;
+      vertical-align: middle;
+      text-align: center;
+      color: #eee;
+      transition: 0.4s;
+      margin: 2px 0px 2px 0px;
+      background-repeat: no-repeat;
+      background-size: 0;
+      background-position: center;
+    }
+
+    .inrtl-section:hover {
+      opacity: 0.9;
+    }
+
+    .inrtl-active {
+      background-color: #fff;
+      color: #000;
+      background-size: 4em;
+    }
+
+    .inrtl-mag-glass {
+      background-image: url('./images/mag-glass.svg');
+    }
+
+    .inrtl-gears {
+      background-image: url('./images/gears.svg');
+    }
+
+    .inrtl-bulb {
+      background-image: url('./images/bulb.svg');
+    }
+
+    .inrtl-panel {
+      width: 100%;
+      border: none;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .inrtl-text-input {
+      width: 98%;
+      border: none;
+      height: 3vh;
+      border-bottom: 2px solid #008080;
+      transition: 0.4s;
+    }
+
+    .inrtl-text-input:hover {
+      border-color: #005050;
+    }
+
+    .inrtl-input-btn {
+      background-color: #eff0f2;
+      border: 1px solid #999;
+      border-radius: 5px;
+      height: 2em;
+      color: #000;
+      font-weight: bold;
+      min-width: 20%;
+      transition: 0.4s;
+      float: right;
+      margin: 2px;
+    }
+
+    .inrtl-input-btn:hover {
+      background-color: #005050;
+    }
+
+    .inrtl-select-btn {
+      width: 100%;
+      height: 2em;
+      border-radius: 5px;
+      border: 1px solid #999;
+    }
+
+
+    .inrtl-cstmbx-1 {
+      border: 2px solid rgb(16, 37, 54);
+      padding: 0.5em;
+    }
+
+    .inrtl-cstmpr-1 {
+      font-weight: bold;
+      color: rgb(29, 67, 98);
+    }
+
+    .inrtl-table {
+      width: 100%;
+    }
+
+    .inrtl-tr:nth-child(even) {
+      background-color: rgb(176, 207, 232);
+    }
+
+    .inrtl-tr:nth-child(odd) {
+      background-color: rgb(215, 231, 244);
+    }
+
+    .inrtl-th {
+      font-weight: bold;
+      color: #eee;
+      background-color:  rgb(16, 37, 54);
+      padding: 0.5em;
+      text-align: left;
+    }
+
+    .inrtl-td {
+      padding: 0.5em;
+    }
+
+    .inrtl-red {
+      background-color: #f00;
+      color: #eee;
+    }
+
+    .inrtl-white {
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .inrtl-h2 {
+      border-bottom: 0.25em solid #008080;
+      border-image: linear-gradient(to right, #102536ff 40%, #10253600 40%);
+      border-image-slice: 1;
+      text-align: center;
+      max-width: max-content;
+    }
+  </style>
+</head>
+
+<body class="inrtl-body">
+  <div class="inrtl-container">
+    <div class="inrtl-accordion-container">
+      <div class="inrtl-divtable">
+        <div class="inrtl-divtr">
+          <div class="inrtl-section inrtl-divtd inrtl-mag-glass inrtl-active">Identify Value</div>
+          <div class="inrtl-section inrtl-divtd inrtl-bulb">Enable Value</div>
+          <div class="inrtl-section inrtl-divtd inrtl-gears">Track & Innovate Value</div>
+        </div>
+      </div>
+      <br />
+      <div class="inrtl-panel-container">
+        <div class="inrtl-panel">
+          <h2 class="inrtl-h2">Business Leading Practices</h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <ol>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            </ol>
+          <div class="inrtl-cstmbx-1 inrtl-cstmpr-1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br />
+            <br />
+            - List Item 1<br />
+            - List Item 2
+          </div>
+          <h2 class="inrtl-h2">Business Leading Practices</h2>
+          <table class="inrtl-table">
+            <tr class="inrtl-tr">
+              <th class="inrtl-th">Heading 1</th>
+              <th class="inrtl-th">Heading 2</th>
+              <th class="inrtl-th">Heading 3</th>
+              <th class="inrtl-th">Heading 4</th>
+            </tr>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td">Data 1</td>
+              <td class="inrtl-td">Data 2</td>
+              <td class="inrtl-td">Data 3</td>
+              <td class="inrtl-td">Data 4</td>
+            </tr>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td">Data 1</td>
+              <td class="inrtl-td">Data 2</td>
+              <td class="inrtl-td">Data 3</td>
+              <td class="inrtl-td">Data 4</td>
+            </tr>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td">Data 1</td>
+              <td class="inrtl-td">Data 2</td>
+              <td class="inrtl-td">Data 3</td>
+              <td class="inrtl-td">Data 4</td>
+            </tr>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td">Data 1</td>
+              <td class="inrtl-td">Data 2</td>
+              <td class="inrtl-td">Data 3</td>
+              <td class="inrtl-td">Data 4</td>
+            </tr>
+          </table>
+          <h2 class="inrtl-h2">Heading Level 3</h2>
+          <div class="inrtl-cstmpr-1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="inrtl-panel">
+          <div class="inrtl-divtable">
+            <div class="inrtl-divtr">
+              <div class="inrtl-divtd">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th inrtl-red">Heading 1</th>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td inrtl-white">
+                      <strong>Bold Text</strong>
+                      <br />
+                      <ul type="square">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="inrtl-divtd">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th">Heading 1</th>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td inrtl-white">
+                      <strong>Bold Text</strong>
+                      <br />
+                      <ul type="square">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <br /><br />
+          <table class="inrtl-table">
+            <tr class="inrtl-tr">
+              <th class="inrtl-th">Heading 1</th>
+              <th class="inrtl-th">Heading 2</th>
+              <th class="inrtl-th">Heading 3</th>
+              <th class="inrtl-th">Heading 4</th>
+            </tr>
+            <tr class="inrtl-tr">
+              <td class="inrtl-white">Data 1</td>
+              <td class="inrtl-white">Data 2</td>
+              <td class="inrtl-white">Data 3</td>
+              <td class="inrtl-white">Data 4</td>
+            </tr>
+          </table>
+          <br><br>
+          <table class="inrtl-table">
+            <tr class="inrtl-tr">
+              <th class="inrtl-th" colspan="2">Heading 1</th>
+            </tr>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td inrtl-white">
+                <strong>Bold Text</strong>
+                <br />
+                <ul type="square">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                </ul>
+              </td>
+              <td class="inrtl-td inrtl-white">
+                <strong>Bold Text</strong>
+                <br />
+                <ul type="square">
+                  <li>List Item 1</li>
+                  <li>List Item 2</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inrtl-panel">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var sections = document.getElementsByClassName("inrtl-section");
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].addEventListener("click", function() {
+        var j;
+        var panelIndex = -1;
+
+        var allSections = document.getElementsByClassName("inrtl-section");
+        for (j = 0; j < allSections.length; j++) {
+          if (this === allSections[j]) {
+            panelIndex = j;
+          }
+        }
+
+        var activeSections = document.getElementsByClassName("inrtl-active");
+        for (j = 0; j < activeSections.length; j++) {
+          activeSections[j].classList.remove("inrtl-active");
+        }
+        this.classList.add("inrtl-active");
+
+        var allPanels = document.getElementsByClassName("inrtl-panel");
+        var panel = allPanels[panelIndex];
+        for (j = 0; j < allPanels.length; j++) {
+          if (allPanels[j] !== panel) {
+            allPanels[j].style.maxHeight = null;
+            allPanels[j].style.opacity = 0;
+          }
+        }
+
+        if (panel.style.maxHeight) {
+          this.classList.remove("inrtl-active");
+          panel.style.maxHeight = null;
+          panel.style.opacity = 0;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.style.opacity = 1;
+        }
+      });
+    }
+    document.getElementsByClassName("inrtl-panel")[0].style.maxHeight = document.getElementsByClassName("inrtl-panel")[0].scrollHeight + "px";
+    document.getElementsByClassName("inrtl-panel")[0].style.opacity = 1;
+  </script>
+
+</body>
+
+</html>
