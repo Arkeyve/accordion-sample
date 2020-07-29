@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html class="inrtl-html" lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <title>Accordion</title>
 
   <style type="text/css">
-    html,
-    body {
+    html.inrtl-html,
+    body.inrtl-body {
       margin: 0px;
       height: 100%;
       font-family: Arial;
       font-size: 14px;
     }
 
-    .container {
+    .inrtl-container {
       width: 100%;
       height: 100%;
       overflow: hidden;
     }
 
-    .header {
+    /* .header {
       background-color: #009a44;
       height: 5vh;
       vertical-align: middle;
@@ -36,36 +36,33 @@
       left: 0;
       padding: 0.5%;
       border-right: none;
-    }
+    } */
 
-    .accordion-container {
+    .inrtl-accordion-container {
       height: 100%;
-      width: 78%;
-      position: fixed;
-      left: 21%;
       padding: 0.5%;
     }
 
-    .divtable {
+    .inrtl-divtable {
       width: 100%;
       display: table;
     }
 
-    .divtr {
+    .inrtl-divtr {
       display: table-row;
       width: 100%;
     }
 
-    .divtd {
+    .inrtl-divtd {
       display: table-cell;
       width: auto;
     }
 
-    .panel-container {
+    .inrtl-panel-container {
       /* display: table-row; */
     }
 
-    .section {
+    .inrtl-section {
       background-color: #e7f6cf;
       height: 5vh;
       border: 1px solid #009a44;
@@ -80,8 +77,8 @@
       margin: 2px 0px 2px 0px;
     }
 
-    .section:hover,
-    .active {
+    .inrtl-section:hover,
+    .inrtl-active {
       background-color: #009a44;
       color: #eee;
       /* border-bottom: 5px solid #005050; */
@@ -89,7 +86,7 @@
       border-image-slice: 1; */
     }
 
-    .panel {
+    .inrtl-panel {
       width: 100%;
       border: none;
       max-height: 0;
@@ -98,7 +95,7 @@
       transition: opacity 0.3s ease-out;
     }
 
-    .text-input {
+    .inrtl-text-input {
       width: 98%;
       border: none;
       height: 3vh;
@@ -106,11 +103,11 @@
       transition: 0.4s;
     }
 
-    .text-input:hover {
+    .inrtl-text-input:hover {
       border-color: #005050;
     }
 
-    .input-btn {
+    .inrtl-input-btn {
       background-color: #eff0f2;
       border: 1px solid #999;
       border-radius: 5px;
@@ -123,40 +120,40 @@
       margin: 2px;
     }
 
-    .input-btn:hover {
+    .inrtl-input-btn:hover {
       background-color: #005050;
     }
 
-    .select-btn {
+    .inrtl-select-btn {
       width: 100%;
       height: 2em;
       border-radius: 5px;
       border: 1px solid #999;
     }
 
-    .cstmbx-1 {
+    .inrtl-cstmbx-1 {
       border: 2px solid #268a10;
       padding: 0.5em;
     }
 
-    .cstmpr-1 {
+    .inrtl-cstmpr-1 {
       font-weight: bold;
       color: #446016;
     }
 
-    table {
+    .inrtl-table {
       width: 100%;
     }
 
-    tr:nth-child(even) {
+    .inrtl-tr:nth-child(even) {
       background-color: #d9e7cd;
     }
 
-    tr:nth-child(odd) {
+    .inrtl-tr:nth-child(odd) {
       background-color: #eef4e8;
     }
 
-    th {
+    .inrtl-th {
       font-weight: bold;
       color: #eee;
       background-color: #86bc26;
@@ -164,28 +161,28 @@
       text-align: left;
     }
 
-    td {
+    .inrtl-td {
       padding: 0.5em;
     }
 
-    .red {
+    .inrtl-red {
       background-color: #f00;
       color: #eee;
     }
 
-    .white {
+    .inrtl-white {
       background-color: #fff;
       border: 1px solid #ddd;
     }
   </style>
 </head>
 
-<body>
-  <div class="container">
-    <div class="header">
+<body class="inrtl-body">
+  <div class="inrtl-container">
+    <!-- <div class="header">
       <strong>Header</strong>
-    </div>
-    <div class="left-nav">
+    </div> -->
+    <!-- <div class="left-nav">
       <strong>Radio 1 Title</strong><br />
       <input type="radio" name="radio1" id="radioid1" value=""><label for="radioid1">Radio 1</label>
       <br /><br />
@@ -224,72 +221,72 @@
       <br /><br />
       <input type="button" name="" value="Button 1" class="input-btn">
       <input type="button" name="" value="Button 2" class="input-btn">
-    </div>
-    <div class="accordion-container">
-      <div class="divtable">
-        <div class="divtr">
-          <div class="section divtd active">Section Header</div>
-          <div class="section divtd">Section Header</div>
-          <div class="section divtd">Section Header</div>
+    </div> -->
+    <div class="inrtl-accordion-container">
+      <div class="inrtl-divtable">
+        <div class="inrtl-divtr">
+          <div class="inrtl-section inrtl-divtd inrtl-active">Section Header</div>
+          <div class="inrtl-section inrtl-divtd">Section Header</div>
+          <div class="inrtl-section inrtl-divtd">Section Header</div>
         </div>
       </div>
       <br />
-      <div class="panel-container">
-        <div class="panel">
-          <div class="cstmbx-1 cstmpr-1">
+      <div class="inrtl-panel-container">
+        <div class="inrtl-panel">
+          <div class="inrtl-cstmbx-1 inrtl-cstmpr-1">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br />
             <br />
             - List Item 1<br />
             - List Item 2
           </div>
           <h3>Heading Level 3</h3>
-          <table>
-            <tr>
-              <th>Heading 1</th>
-              <th>Heading 2</th>
-              <th>Heading 3</th>
-              <th>Heading 4</th>
+          <table class="inrtl-table">
+            <tr class="inrtl-tr">
+              <th class="inrtl-th">Heading 1</th>
+              <th class="inrtl-th">Heading 2</th>
+              <th class="inrtl-th">Heading 3</th>
+              <th class="inrtl-th">Heading 4</th>
             </tr>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-              <td>Data 4</td>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td">Data 1</td>
+              <td class="inrtl-td">Data 2</td>
+              <td class="inrtl-td">Data 3</td>
+              <td class="inrtl-td">Data 4</td>
             </tr>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-              <td>Data 4</td>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td">Data 1</td>
+              <td class="inrtl-td">Data 2</td>
+              <td class="inrtl-td">Data 3</td>
+              <td class="inrtl-td">Data 4</td>
             </tr>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-              <td>Data 4</td>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td">Data 1</td>
+              <td class="inrtl-td">Data 2</td>
+              <td class="inrtl-td">Data 3</td>
+              <td class="inrtl-td">Data 4</td>
             </tr>
-            <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
-              <td>Data 3</td>
-              <td>Data 4</td>
+            <tr class="inrtl-tr">
+              <td class="inrtl-td">Data 1</td>
+              <td class="inrtl-td">Data 2</td>
+              <td class="inrtl-td">Data 3</td>
+              <td class="inrtl-td">Data 4</td>
             </tr>
           </table>
           <h3>Heading Level 3</h3>
-          <div class="cstmpr-1">
+          <div class="inrtl-cstmpr-1">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </div>
         </div>
-        <div class="panel">
-          <div class="divtable">
-            <div class="divtr">
-              <div class="divtd">
-                <table>
-                  <tr>
-                    <th class="red">Heading 1</th>
+        <div class="inrtl-panel">
+          <div class="inrtl-divtable">
+            <div class="inrtl-divtr">
+              <div class="inrtl-divtd">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th inrtl-red">Heading 1</th>
                   </tr>
-                  <tr>
-                    <td class="white">
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td inrtl-white">
                       <strong>Bold Text</strong>
                       <br />
                       <ul type="square">
@@ -300,13 +297,13 @@
                   </tr>
                 </table>
               </div>
-              <div class="divtd">
-                <table>
-                  <tr>
-                    <th>Heading 1</th>
+              <div class="inrtl-divtd">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th">Heading 1</th>
                   </tr>
-                  <tr>
-                    <td class="white">
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td inrtl-white">
                       <strong>Bold Text</strong>
                       <br />
                       <ul type="square">
@@ -320,27 +317,27 @@
             </div>
           </div>
           <br /><br />
-          <table>
-            <tr>
-              <th>Heading 1</th>
-              <th>Heading 2</th>
-              <th>Heading 3</th>
-              <th>Heading 4</th>
+          <table class="inrtl-table">
+            <tr class="inrtl-tr">
+              <th class="inrtl-th">Heading 1</th>
+              <th class="inrtl-th">Heading 2</th>
+              <th class="inrtl-th">Heading 3</th>
+              <th class="inrtl-th">Heading 4</th>
             </tr>
-            <tr>
-              <td class="white">Data 1</td>
-              <td class="white">Data 2</td>
-              <td class="white">Data 3</td>
-              <td class="white">Data 4</td>
+            <tr class="inrtl-tr">
+              <td class="inrtl-white">Data 1</td>
+              <td class="inrtl-white">Data 2</td>
+              <td class="inrtl-white">Data 3</td>
+              <td class="inrtl-white">Data 4</td>
             </tr>
           </table>
           <br><br>
-          <table>
-            <tr>
-              <th colspan="2">Heading 1</th>
+          <table class="inrtl-table">
+            <tr class="inrtl-tr">
+              <th class="inrtl-th" colspan="2">Heading 1</th>
             </tr>
-            <tr>
-              <td class="white">
+            <tr class="inrtl-tr">
+              <td class="inrtl-td inrtl-white">
                 <strong>Bold Text</strong>
                 <br />
                 <ul type="square">
@@ -348,7 +345,7 @@
                   <li>List Item 2</li>
                 </ul>
               </td>
-              <td class="white">
+              <td class="inrtl-td inrtl-white">
                 <strong>Bold Text</strong>
                 <br />
                 <ul type="square">
@@ -359,7 +356,7 @@
             </tr>
           </table>
         </div>
-        <div class="panel">
+        <div class="inrtl-panel">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -376,26 +373,26 @@
   </div>
 
   <script type="text/javascript">
-    var sections = document.getElementsByClassName("section");
+    var sections = document.getElementsByClassName("inrtl-section");
     for (var i = 0; i < sections.length; i++) {
       sections[i].addEventListener("click", function() {
         var j;
         var panelIndex = -1;
 
-        var allSections = document.getElementsByClassName("section");
+        var allSections = document.getElementsByClassName("inrtl-section");
         for (j = 0; j < allSections.length; j++) {
           if (this === allSections[j]) {
             panelIndex = j;
           }
         }
 
-        var activeSections = document.getElementsByClassName("active");
+        var activeSections = document.getElementsByClassName("inrtl-active");
         for (j = 0; j < activeSections.length; j++) {
-          activeSections[j].classList.remove("active");
+          activeSections[j].classList.remove("inrtl-active");
         }
-        this.classList.add("active");
+        this.classList.add("inrtl-active");
 
-        var allPanels = document.getElementsByClassName("panel");
+        var allPanels = document.getElementsByClassName("inrtl-panel");
         var panel = allPanels[panelIndex];
         for (j = 0; j < allPanels.length; j++) {
           if (allPanels[j] !== panel) {
@@ -405,7 +402,7 @@
         }
 
         if (panel.style.maxHeight) {
-          this.classList.remove("active");
+          this.classList.remove("inrtl-active");
           panel.style.maxHeight = null;
           panel.style.opacity = 0;
         } else {
@@ -414,8 +411,8 @@
         }
       });
     }
-    document.getElementsByClassName("panel")[0].style.maxHeight = document.getElementsByClassName("panel")[0].scrollHeight + "px";
-    document.getElementsByClassName("panel")[0].style.opacity = 1;
+    document.getElementsByClassName("inrtl-panel")[0].style.maxHeight = document.getElementsByClassName("inrtl-panel")[0].scrollHeight + "px";
+    document.getElementsByClassName("inrtl-panel")[0].style.opacity = 1;
   </script>
 
 </body>
