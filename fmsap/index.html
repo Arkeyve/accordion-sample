@@ -94,6 +94,7 @@
       border: none;
       max-height: 0;
       opacity: 0;
+      display: none;
       transition: opacity 0.3s ease-out;
     }
 
@@ -149,10 +150,8 @@
     }
 
     .inrtl-cstmpr-3 {
-      height: 90%;
       padding-top: 1em;
       transition: 0.5s;
-      overflow-y: auto;
     }
 
     .inrtl-table {
@@ -223,6 +222,7 @@
       border-image: linear-gradient(to right, #102536ff 15%, #10253600 15%);
       border-image-slice: 1;
       font-weight: bold;
+      font-size: 1.75em;
     }
 
     .inrtl-h2img {
@@ -253,23 +253,23 @@
     }
 
     .inrtl-fullcard {
-      position: fixed;
+      position: absolute;
       top: 0;
       padding: 2em;
       display: none;
       opacity: 0;
       transition: 0.2s;
-      margin: 5% 10% 5% 10%;
+      margin: 8% 10% 5% 10%;
       border-radius: 5px;
       background-origin: content-box;
       background-repeat: no-repeat;
-      background-size: 5em;
+      background-size: 6em;
       background-position: top right;
+      font-size: 1.2em;
     }
 
     .inrtl-active-fullcard {
-      height: 80%;
-      width: 77%;
+      width: 76%;
       display: block;
       background-color: #fff;
       box-shadow: 0 0 5px 0 #666;
@@ -648,6 +648,34 @@
         <li>Invoice entry, invoice approval and payment processing roles should be clearly segregated.</li>
         <li>Use imaging solution which can automate the process of invoice entry.</li>
       </ol>
+      <ol>
+        <li>Limit manual invoice creation by working with suppliers on interface or OCR options.</li>
+        <li>Use appropriate description for invoice header/line description. Description will be visible during invoice approval notification.</li>
+        <li>For non-merchandise expenses, freight and miscellaneous expenses are usually allocated across invoice lines.</li>
+        <li>Use recurring invoice feature for invoices that have static amount across multiple periods.</li>
+        <li>Use distributions sets for accounting distribution across multiple locations or departments.</li>
+        <li>Use show available prepayment options for system to display available prepayments while entering standard invoice.</li>
+        <li>Use Permanent prepayment feature to deny application of invoices to prepayment.</li>
+        <li>For imported invoices use automated reconciliation process in interfaces to match batch totals.</li>
+        <li>Invoices related to goods should be matched 3-way. Invoices related to services should be matched 2-way.</li>
+        <li>Deferred expenses should be used when multi-period prepayment exists but supplier does not send a monthly invoice.</li>
+        <li>Invoice entry, invoice approval and payment processing roles should be clearly segregated.</li>
+        <li>Use imaging solution which can automate the process of invoice entry.</li>
+      </ol>
+      <ol>
+        <li>Limit manual invoice creation by working with suppliers on interface or OCR options.</li>
+        <li>Use appropriate description for invoice header/line description. Description will be visible during invoice approval notification.</li>
+        <li>For non-merchandise expenses, freight and miscellaneous expenses are usually allocated across invoice lines.</li>
+        <li>Use recurring invoice feature for invoices that have static amount across multiple periods.</li>
+        <li>Use distributions sets for accounting distribution across multiple locations or departments.</li>
+        <li>Use show available prepayment options for system to display available prepayments while entering standard invoice.</li>
+        <li>Use Permanent prepayment feature to deny application of invoices to prepayment.</li>
+        <li>For imported invoices use automated reconciliation process in interfaces to match batch totals.</li>
+        <li>Invoices related to goods should be matched 3-way. Invoices related to services should be matched 2-way.</li>
+        <li>Deferred expenses should be used when multi-period prepayment exists but supplier does not send a monthly invoice.</li>
+        <li>Invoice entry, invoice approval and payment processing roles should be clearly segregated.</li>
+        <li>Use imaging solution which can automate the process of invoice entry.</li>
+      </ol>
     </div>
   </div>
   <div class="inrtl-fullcard" id="inrtl-fullcard-2">
@@ -706,6 +734,23 @@
   </div>
 
   <script type="text/javascript">
+    var smooth_scroll = function(scroll_to) {
+      var dscroll_interval = setInterval(function() {
+        var leap = document.documentElement.scrollTop / 20;
+        document.documentElement.scrollTop -= leap;
+        if (document.documentElement.scrollTop <= scroll_to) {
+          clearInterval(dscroll_interval);
+        }
+      }, 1);
+      var bscroll_interval = setInterval(function() {
+        var leap = document.body.scrollTop / 20;
+        document.body.scrollTop -= leap;
+        if (document.body.scrollTop <= scroll_to) {
+          clearInterval(bscroll_interval);
+        }
+      }, 1);
+    }
+
     var sections = document.getElementsByClassName("inrtl-section");
     for (var i = 0; i < sections.length; i++) {
       sections[i].addEventListener("click", function() {
@@ -731,6 +776,9 @@
           if (allPanels[j] !== panel) {
             allPanels[j].style.maxHeight = null;
             allPanels[j].style.opacity = 0;
+            setTimeout(function() {
+              allPanels[j].style.display = "none";
+            }, 1);
           }
         }
 
@@ -739,12 +787,16 @@
           // panel.style.maxHeight = null;
           // panel.style.opacity = 0;
         } else {
+          panel.style.display = "block";
           panel.style.maxHeight = panel.scrollHeight + "px";
-          panel.style.opacity = 1;
+          setTimeout(function() {
+            panel.style.opacity = 1;
+          }, 1);
         }
       });
     }
     document.getElementsByClassName("inrtl-panel")[0].style.maxHeight = document.getElementsByClassName("inrtl-panel")[0].scrollHeight + "px";
+    document.getElementsByClassName("inrtl-panel")[0].style.display = "block";
     document.getElementsByClassName("inrtl-panel")[0].style.opacity = 1;
 
     var close_cards = function() {
@@ -752,6 +804,8 @@
       var container = document.getElementsByClassName("inrtl-accordion-container")[0];
       open_card.style.opacity = 0;
       container.style.opacity = 1;
+      container.style.cursor = "unset";
+      container.style.height = document.scrollingElement.scrollHeight + "px";
       setTimeout(function() {
         open_card.classList.remove('inrtl-active-fullcard');
         document.getElementsByClassName("inrtl-accordion-container")[0].removeEventListener("click", close_cards);
@@ -763,13 +817,16 @@
       cards[i].addEventListener("click", function() {
         var open_cards = document.getElementsByClassName("inrtl-active-fullcard");
         if (this.id && open_cards.length === 0) {
+          smooth_scroll(0);
           var fullcardid = "inrtl-fullcard-" + this.id.split('inrtl-card-')[1];
           var fullcard = document.getElementById(fullcardid);
           var container = document.getElementsByClassName("inrtl-accordion-container")[0];
           fullcard.classList.add("inrtl-active-fullcard");
+          container.style.height = document.scrollingElement.scrollHeight + "px";
           setTimeout(function() {
             fullcard.style.opacity = 1;
             container.style.opacity = 0.6;
+            container.style.cursor = "pointer";
             document.getElementsByClassName("inrtl-accordion-container")[0].addEventListener("click", close_cards);
           }, 1);
         }
