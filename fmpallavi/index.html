@@ -11,7 +11,7 @@
       margin: 0px;
       height: 100%;
       font-family: Arial;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .inrtl-container {
@@ -151,7 +151,7 @@
     .inrtl-th {
       font-weight: bold;
       color: #eee;
-      background-color:  rgb(16, 37, 54);
+      background-color: rgb(16, 37, 54);
       padding: 0.5em;
       text-align: left;
     }
@@ -170,12 +170,48 @@
       border: 1px solid #ddd;
     }
 
+    .inrtl-h2table {
+      display: table;
+      width: 100%;
+    }
+
+    .inrtl-h2tr {
+      display: table-row;
+      width: 100%;
+    }
+
+    .inrtl-h2td {
+      display: table-cell;
+      width: 85%;
+      padding: 1em;
+    }
+
+    .inrtl-h2td:nth-child(odd) {
+      width: 15%;
+    }
+
     .inrtl-h2 {
-      border-bottom: 0.25em solid #008080;
-      border-image: linear-gradient(to right, #102536ff 40%, #10253600 40%);
-      border-image-slice: 1;
-      text-align: center;
-      max-width: max-content;
+      padding-right: 0.5em;
+      border-right: 0.25em solid rgb(16, 37, 54);
+      /* border-image: linear-gradient(to right, #102536ff 40%, #10253600 40%);
+      border-image-slice: 1; */
+      text-align: right;
+      font-weight: bold;
+      background-image: url('./images/send.svg');
+    }
+
+    .inrtl-h2img {
+      height: 4em;
+    }
+
+    .intrl-hrl {
+      width: 70%;
+      opacity: 0.7;
+    }
+
+    .intrl-hrs {
+      width: 60%;
+      opacity: 0.3;
     }
   </style>
 </head>
@@ -193,65 +229,200 @@
       <br />
       <div class="inrtl-panel-container">
         <div class="inrtl-panel">
-          <h2 class="inrtl-h2">Business Leading Practices</h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            <ol>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            </ol>
-          <div class="inrtl-cstmbx-1 inrtl-cstmpr-1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br />
-            <br />
-            - List Item 1<br />
-            - List Item 2
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Business Leading Practices</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <ol>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                </ol>
+              </div>
+            </div>
           </div>
-          <h2 class="inrtl-h2">Business Leading Practices</h2>
-          <table class="inrtl-table">
-            <tr class="inrtl-tr">
-              <th class="inrtl-th">Heading 1</th>
-              <th class="inrtl-th">Heading 2</th>
-              <th class="inrtl-th">Heading 3</th>
-              <th class="inrtl-th">Heading 4</th>
-            </tr>
-            <tr class="inrtl-tr">
-              <td class="inrtl-td">Data 1</td>
-              <td class="inrtl-td">Data 2</td>
-              <td class="inrtl-td">Data 3</td>
-              <td class="inrtl-td">Data 4</td>
-            </tr>
-            <tr class="inrtl-tr">
-              <td class="inrtl-td">Data 1</td>
-              <td class="inrtl-td">Data 2</td>
-              <td class="inrtl-td">Data 3</td>
-              <td class="inrtl-td">Data 4</td>
-            </tr>
-            <tr class="inrtl-tr">
-              <td class="inrtl-td">Data 1</td>
-              <td class="inrtl-td">Data 2</td>
-              <td class="inrtl-td">Data 3</td>
-              <td class="inrtl-td">Data 4</td>
-            </tr>
-            <tr class="inrtl-tr">
-              <td class="inrtl-td">Data 1</td>
-              <td class="inrtl-td">Data 2</td>
-              <td class="inrtl-td">Data 3</td>
-              <td class="inrtl-td">Data 4</td>
-            </tr>
-          </table>
-          <h2 class="inrtl-h2">Heading Level 3</h2>
-          <div class="inrtl-cstmpr-1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <hr class="intrl-hrl">
+          <hr class="intrl-hrs">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Quantitative Value Identifications</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <ol>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                </ol>
+              </div>
+            </div>
           </div>
+          <hr class="intrl-hrl">
+          <hr class="intrl-hrs">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Qualitative Value Opportunities</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <ol>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <hr class="intrl-hrl">
+          <hr class="intrl-hrs">
         </div>
         <div class="inrtl-panel">
-          <div class="inrtl-divtable">
-            <div class="inrtl-divtr">
-              <div class="inrtl-divtd">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Business Leading Practices</h2>
+              </div>
+              <div class="inrtl-h2td">
                 <table class="inrtl-table">
                   <tr class="inrtl-tr">
-                    <th class="inrtl-th inrtl-red">Heading 1</th>
+                    <th class="inrtl-th">Heading 1</th>
+                    <th class="inrtl-th">Heading 2</th>
+                    <th class="inrtl-th">Heading 3</th>
+                    <th class="inrtl-th">Heading 4</th>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td">Data 1</td>
+                    <td class="inrtl-td">Data 2</td>
+                    <td class="inrtl-td">Data 3</td>
+                    <td class="inrtl-td">Data 4</td>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td">Data 1</td>
+                    <td class="inrtl-td">Data 2</td>
+                    <td class="inrtl-td">Data 3</td>
+                    <td class="inrtl-td">Data 4</td>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td">Data 1</td>
+                    <td class="inrtl-td">Data 2</td>
+                    <td class="inrtl-td">Data 3</td>
+                    <td class="inrtl-td">Data 4</td>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td">Data 1</td>
+                    <td class="inrtl-td">Data 2</td>
+                    <td class="inrtl-td">Data 3</td>
+                    <td class="inrtl-td">Data 4</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <hr class="intrl-hrl">
+          <hr class="intrl-hrs">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Qualitative Value Opportunities</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                <div class="inrtl-divtable">
+                  <div class="inrtl-divtr">
+                    <div class="inrtl-divtd">
+                      <table class="inrtl-table">
+                        <tr class="inrtl-tr">
+                          <th class="inrtl-th inrtl-red">Heading 1</th>
+                        </tr>
+                        <tr class="inrtl-tr">
+                          <td class="inrtl-td inrtl-white">
+                            <strong>Bold Text</strong>
+                            <br />
+                            <ul type="square">
+                              <li>List Item 1</li>
+                              <li>List Item 2</li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="inrtl-divtd">
+                      <table class="inrtl-table">
+                        <tr class="inrtl-tr">
+                          <th class="inrtl-th">Heading 1</th>
+                        </tr>
+                        <tr class="inrtl-tr">
+                          <td class="inrtl-td inrtl-white">
+                            <strong>Bold Text</strong>
+                            <br />
+                            <ul type="square">
+                              <li>List Item 1</li>
+                              <li>List Item 2</li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="intrl-hrl">
+          <hr class="intrl-hrs">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Qualitative Value Opportunities</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th">Heading 1</th>
+                    <th class="inrtl-th">Heading 2</th>
+                    <th class="inrtl-th">Heading 3</th>
+                    <th class="inrtl-th">Heading 4</th>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-white">Data 1</td>
+                    <td class="inrtl-white">Data 2</td>
+                    <td class="inrtl-white">Data 3</td>
+                    <td class="inrtl-white">Data 4</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <hr class="intrl-hrl">
+          <hr class="intrl-hrs">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Qualitative Value Opportunities</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th" colspan="2">Heading 1</th>
                   </tr>
                   <tr class="inrtl-tr">
                     <td class="inrtl-td inrtl-white">
@@ -262,15 +433,6 @@
                         <li>List Item 2</li>
                       </ul>
                     </td>
-                  </tr>
-                </table>
-              </div>
-              <div class="inrtl-divtd">
-                <table class="inrtl-table">
-                  <tr class="inrtl-tr">
-                    <th class="inrtl-th">Heading 1</th>
-                  </tr>
-                  <tr class="inrtl-tr">
                     <td class="inrtl-td inrtl-white">
                       <strong>Bold Text</strong>
                       <br />
@@ -284,45 +446,6 @@
               </div>
             </div>
           </div>
-          <br /><br />
-          <table class="inrtl-table">
-            <tr class="inrtl-tr">
-              <th class="inrtl-th">Heading 1</th>
-              <th class="inrtl-th">Heading 2</th>
-              <th class="inrtl-th">Heading 3</th>
-              <th class="inrtl-th">Heading 4</th>
-            </tr>
-            <tr class="inrtl-tr">
-              <td class="inrtl-white">Data 1</td>
-              <td class="inrtl-white">Data 2</td>
-              <td class="inrtl-white">Data 3</td>
-              <td class="inrtl-white">Data 4</td>
-            </tr>
-          </table>
-          <br><br>
-          <table class="inrtl-table">
-            <tr class="inrtl-tr">
-              <th class="inrtl-th" colspan="2">Heading 1</th>
-            </tr>
-            <tr class="inrtl-tr">
-              <td class="inrtl-td inrtl-white">
-                <strong>Bold Text</strong>
-                <br />
-                <ul type="square">
-                  <li>List Item 1</li>
-                  <li>List Item 2</li>
-                </ul>
-              </td>
-              <td class="inrtl-td inrtl-white">
-                <strong>Bold Text</strong>
-                <br />
-                <ul type="square">
-                  <li>List Item 1</li>
-                  <li>List Item 2</li>
-                </ul>
-              </td>
-            </tr>
-          </table>
         </div>
         <div class="inrtl-panel">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
