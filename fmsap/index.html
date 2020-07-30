@@ -219,10 +219,12 @@
 
     .inrtl-fullcardh2 {
       border-bottom: 0.2em solid rgb(16, 37, 54);
-      border-image: linear-gradient(to right, #102536ff 15%, #10253600 15%);
+      border-image: linear-gradient(to right, #102536ff 40%, #10253600 40%);
       border-image-slice: 1;
       font-weight: bold;
       font-size: 1.75em;
+      max-width: 75%;
+      max-width: fit-content;
     }
 
     .inrtl-h2img {
@@ -803,7 +805,7 @@
       open_card.style.opacity = 0;
       container.style.opacity = 1;
       container.style.cursor = "unset";
-      container.style.height = document.scrollingElement.scrollHeight + "px";
+      container.style.height = (document.scrollingElement ? document.scrollingElement.scrollHeight : document.body.scrollHeight) + "px";
       setTimeout(function() {
         open_card.classList.remove('inrtl-active-fullcard');
         document.getElementsByClassName("inrtl-accordion-container")[0].removeEventListener("click", close_cards);
@@ -820,7 +822,7 @@
           var fullcard = document.getElementById(fullcardid);
           var container = document.getElementsByClassName("inrtl-accordion-container")[0];
           fullcard.classList.add("inrtl-active-fullcard");
-          container.style.height = document.scrollingElement.scrollHeight + "px";
+          container.style.height = (document.scrollingElement ? document.scrollingElement.scrollHeight : document.body.scrollHeight) + "px";
           setTimeout(function() {
             fullcard.style.opacity = 1;
             container.style.opacity = 0.6;
