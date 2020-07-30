@@ -761,7 +761,8 @@
     var cards = document.getElementsByClassName("inrtl-card");
     for (var i = 0; i < cards.length; i++) {
       cards[i].addEventListener("click", function() {
-        if (this.id) {
+        var open_cards = document.getElementsByClassName("inrtl-active-fullcard");
+        if (this.id && open_cards.length === 0) {
           var fullcardid = "inrtl-fullcard-" + this.id.split('inrtl-card-')[1];
           var fullcard = document.getElementById(fullcardid);
           var container = document.getElementsByClassName("inrtl-accordion-container")[0];
