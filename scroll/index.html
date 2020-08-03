@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html class="inrtl-html" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Accordion</title>
+
+  <style type="text/css">
+    html.inrtl-html,
+    body.inrtl-body {
+      margin: 0px;
+      height: 100%;
+      font-family: Arial;
+      font-size: 16px;
+      color: #222;
+    }
+
+    .noscroll {
+      position: fixed;
+      overflow-y: scroll;
+    }
+
+    .inrtl-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .inrtl-accordion-container {
+      height: 100%;
+      padding: 0em 1em 0em 1em;
+      transition: 0.2s;
+    }
+
+    .inrtl-divtable {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+    }
+
+    .inrtl-divtr {
+      display: table-row;
+      width: 100%;
+    }
+
+    .inrtl-divtd {
+      display: table-cell;
+      width: 100px;
+    }
+
+    .inrtl-panel-container {
+      padding: 0em 8em 0em 8em;
+    }
+
+    .inrtl-section {
+      background-color: rgb(16, 37, 54);
+      height: 3em;
+      font-size: 2em;
+      font-weight: bold;
+      vertical-align: middle;
+      text-align: center;
+      color: #eee;
+      transition: 0.4s;
+      margin: 2px 0px 2px 0px;
+      background-repeat: no-repeat;
+      background-size: 0;
+      background-position: center;
+    }
+
+    .inrtl-section:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+
+    .inrtl-active {
+      background-color: #fff;
+      color: #000;
+      background-size: 2.5em;
+    }
+
+    .inrtl-mag-glass {
+      background-image: url('./images/mag-glass.svg');
+    }
+
+    .inrtl-gears {
+      background-image: url('./images/gears.svg');
+    }
+
+    .inrtl-bulb {
+      background-image: url('./images/bulb.svg');
+    }
+
+    .inrtl-panel {
+      width: 100%;
+      border: none;
+      max-height: 0;
+      opacity: 0;
+      display: none;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .inrtl-text-input {
+      width: 98%;
+      border: none;
+      height: 3vh;
+      border-bottom: 2px solid #008080;
+      transition: 0.4s;
+    }
+
+    .inrtl-text-input:hover {
+      border-color: #005050;
+    }
+
+    .inrtl-input-btn {
+      background-color: #eff0f2;
+      border: 1px solid #999;
+      border-radius: 5px;
+      height: 2em;
+      color: #000;
+      font-weight: bold;
+      min-width: 20%;
+      transition: 0.4s;
+      float: right;
+      margin: 2px;
+    }
+
+    .inrtl-input-btn:hover {
+      background-color: #005050;
+    }
+
+    .inrtl-select-btn {
+      width: 100%;
+      height: 2em;
+      border-radius: 5px;
+      border: 1px solid #999;
+    }
+
+
+    .inrtl-cstmbx-1 {
+      border: 2px solid rgb(16, 37, 54);
+      padding: 0.5em;
+    }
+
+    .inrtl-cstmpr-1 {
+      font-weight: bold;
+      color: rgb(29, 67, 98);
+    }
+
+    .inrtl-cstmpr-2 {
+      margin-bottom: 1.5em;
+    }
+
+    .inrtl-cstmpr-3 {
+      padding-top: 1em;
+      transition: 0.5s;
+    }
+
+    .inrtl-table {
+      width: 100%;
+    }
+
+    .inrtl-tr:nth-child(even) {
+      background-color: rgb(176, 207, 232);
+    }
+
+    .inrtl-tr:nth-child(odd) {
+      background-color: rgb(215, 231, 244);
+    }
+
+    .inrtl-th {
+      font-weight: bold;
+      color: #eee;
+      background-color: rgb(16, 37, 54);
+      padding: 0.5em;
+      text-align: left;
+    }
+
+    .inrtl-td {
+      padding: 0.5em;
+    }
+
+    .inrtl-red {
+      background-color: #f00;
+      color: #eee;
+    }
+
+    .inrtl-white {
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .inrtl-h2table {
+      display: table;
+      width: 100%;
+    }
+
+    .inrtl-h2tr {
+      display: table-row;
+      width: 100%;
+    }
+
+    .inrtl-h2td {
+      display: table-cell;
+      width: 85%;
+      padding: 1em;
+    }
+
+    .inrtl-h2td:nth-child(odd) {
+      width: 15%;
+    }
+
+    .inrtl-h2 {
+      /* padding-right: 0.5em; */
+      /* border-bottom: 0.25em solid rgb(16, 37, 54);
+      border-image: linear-gradient(to right, #102536ff 40%, #10253600 40%); */
+      /* border-image-slice: 1; */
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .inrtl-fullcardh2 {
+      border-bottom: 0.2em solid rgb(16, 37, 54);
+      border-image: linear-gradient(to right, #102536ff 40%, #10253600 40%);
+      border-image-slice: 1;
+      font-weight: bold;
+      font-size: 1.75em;
+      max-width: 75%;
+      max-width: fit-content;
+    }
+
+    .inrtl-h2img {
+      height: 3em;
+    }
+
+    .inrtl-hrl {
+      width: 70%;
+      opacity: 0.7;
+    }
+
+    .inrtl-hrs {
+      width: 60%;
+      opacity: 0.3;
+    }
+
+    .inrtl-card {
+      padding: 1em;
+      transition: 0.4s;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .inrtl-card:hover {
+      box-shadow: 0px 0px 5px 0px #666;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .inrtl-fullcard {
+      /* position: absolute; */
+      /* top: 0; */
+      padding: 2em;
+      /* display: none; */
+      /* opacity: 0; */
+      transition: 0.2s;
+      /* margin: 8% 10% 5% 10%; */
+      /* border-radius: 5px; */
+      background-origin: content-box;
+      background-repeat: no-repeat;
+      background-size: 6em;
+      background-position: top right;
+      /* font-size: 1.2em; */
+    }
+
+    .inrtl-active-fullcard {
+      /* width: 76%; */
+      display: block;
+      background-color: #fff;
+      /* box-shadow: 0 0 5px 0 #666; */
+      /* z-index: 9999; */
+    }
+
+    .inrtl-readmore {
+      height: 1.5em;
+      opacity: 0;
+      transition: 0.4s;
+      text-align: right;
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+    }
+
+    div.inrtl-readmore>img {
+      height: 1.5em;
+    }
+
+    .top-button {
+      position: fixed;
+      display: block;
+      right: 2em;
+      box-shadow: 0 0 5px 0 #ddd;
+      height: 1em;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 2em;
+      border-radius: 5em;
+      width: 1em;
+      transition: 0.4s;
+      opacity: 0;
+      padding: 1em;
+      border: 1px solid rgba(16, 37, 54, 0.5);
+      background-size: contain;
+      background-image: url("./images/top.svg");
+      background-repeat: no-repeat;
+      background-origin: content-box;
+      cursor: pointer;
+      bottom: -2em;
+    }
+
+    .top-button-active {
+      opacity: 1;
+      bottom: 2em;
+    }
+
+    #inrtl-fullcard-0 {
+      background-image: url("./images/send.svg");
+    }
+
+    #inrtl-fullcard-1 {
+      background-image: url("./images/application.svg");
+    }
+
+    #inrtl-fullcard-2 {
+      background-image: url("./images/cloud.svg");
+    }
+
+    #inrtl-fullcard-3 {
+      background-image: url("./images/cloudcapability.svg");
+    }
+
+    #inrtl-fullcard-4 {
+      background-image: url("./images/analytics.svg");
+    }
+
+    #inrtl-fullcard-5 {
+      background-image: url("./images/social.svg");
+    }
+
+    #inrtl-fullcard-6 {
+      background-image: url("./images/flower.svg");
+    }
+  </style>
+</head>
+
+<body class="inrtl-body">
+  <div class="inrtl-container">
+    <div class="inrtl-accordion-container">
+      <div class="inrtl-divtable">
+        <div class="inrtl-divtr">
+          <div class="inrtl-section inrtl-divtd inrtl-mag-glass inrtl-active">Identify Value</div>
+          <div class="inrtl-section inrtl-divtd inrtl-bulb">Enable Value</div>
+          <div class="inrtl-section inrtl-divtd inrtl-gears">Track & Innovate Value</div>
+        </div>
+      </div>
+      <br />
+      <div class="inrtl-panel-container">
+        <div class="inrtl-panel">
+          <div class="inrtl-divtable">
+            <div class="inrtl-divtr">
+              <div class="inrtl-divtd inrtl-card" id="inrtl-card-0">
+                <h2 class="inrtl-h2">
+                  <img src="./images/send.svg" class="inrtl-h2img" alt="">
+                  <br>
+                  Business Leading Practices
+                </h2>
+                <div class="inrtl-cstmpr-2">
+                  Short description of what will be covered under Business Leading Practices. I could not figure out which data point this would correspond to from the excel, and am therefore leaving this text as a placeholder. Please fill in the
+                  details as you see fit.
+                </div>
+                <div class="inrtl-readmore" id="inrtl-readmore-0">
+                  <img src="./images/next.svg" alt="">
+                </div>
+              </div>
+              <div class="inrtl-divtd inrtl-card" id="inrtl-card-1">
+                <h2 class="inrtl-h2">
+                  <img src="./images/application.svg" class="inrtl-h2img" alt="">
+                  <br>
+                  Application Leading Practices
+                </h2>
+                <div class="inrtl-cstmpr-2">
+                  Short description of what will be covered under Business Leading Practices. I could not figure out which data point this would correspond to from the excel, and am therefore leaving this text as a placeholder. Please fill in the
+                  details as you see fit. Adding a few extra sentences to show this layout woud react to longer texts over here. This should make the card height to be equal to the highest member in the row.
+                </div>
+                <div class="inrtl-readmore" id="inrtl-readmore-1">
+                  <img src="./images/next.svg" alt="">
+                </div>
+              </div>
+              <div class="inrtl-divtd inrtl-card" id="inrtl-card-2">
+                <h2 class="inrtl-h2">
+                  <img src="./images/cloud.svg" class="inrtl-h2img" alt="">
+                  <br>
+                  Oracle Cloud Enablers
+                </h2>
+                <div class="inrtl-cstmpr-2">
+                  Short description of what will be covered under Business Leading Practices. I could not figure out which data point this would correspond to from the excel, and am therefore leaving this text as a placeholder. Please fill in the
+                  details as you see fit.
+                </div>
+                <div class="inrtl-readmore" id="inrtl-readmore-2">
+                  <img src="./images/next.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="inrtl-divtr">
+              <div class="inrtl-divtd inrtl-card" id="inrtl-card-3">
+                <h2 class="inrtl-h2">
+                  <img src="./images/cloudcapability.svg" class="inrtl-h2img" alt="">
+                  <br>
+                  Oracle Cloud Capability
+                </h2>
+                <div class="inrtl-cstmpr-2">
+                  Short description of what will be covered under Business Leading Practices. I could not figure out which data point this would correspond to from the excel, and am therefore leaving this text as a placeholder. Please fill in the
+                  details as you see fit.
+                </div>
+                <div class="inrtl-readmore" id="inrtl-readmore-3">
+                  <img src="./images/next.svg" alt="">
+                </div>
+              </div>
+              <div class="inrtl-divtd inrtl-card" id="inrtl-card-4">
+                <h2 class="inrtl-h2">
+                  <img src="./images/analytics.svg" class="inrtl-h2img" alt="">
+                  <br>
+                  Analytics
+                </h2>
+                <div class="inrtl-cstmpr-2">
+                  Short description of what will be covered under Business Leading Practices. I could not figure out which data point this would correspond to from the excel, and am therefore leaving this text as a placeholder. Please fill in the
+                  details as you see fit.
+                </div>
+                <div class="inrtl-readmore" id="inrtl-readmore-4">
+                  <img src="./images/next.svg" alt="">
+                </div>
+              </div>
+              <div class="inrtl-divtd inrtl-card" id="inrtl-card-5">
+                <h2 class="inrtl-h2">
+                  <img src="./images/social.svg" class="inrtl-h2img" alt="">
+                  <br>
+                  Social Capability
+                </h2>
+                <div class="inrtl-cstmpr-2">
+                  Short description of what will be covered under Business Leading Practices. I could not figure out which data point this would correspond to from the excel, and am therefore leaving this text as a placeholder. Please fill in the
+                  details as you see fit.
+                </div>
+                <div class="inrtl-readmore" id="inrtl-readmore-5">
+                  <img src="./images/next.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="inrtl-divtr">
+              <div class="inrtl-divtd inrtl-card" id="inrtl-card-6">
+                <h2 class="inrtl-h2">
+                  <img src="./images/flower.svg" class="inrtl-h2img" alt="">
+                  <br>
+                  Deloitte-Market Enablers
+                </h2>
+                <div class="inrtl-cstmpr-2">
+                  Short description of what will be covered under Business Leading Practices. I could not figure out which data point this would correspond to from the excel, and am therefore leaving this text as a placeholder. Please fill in the
+                  details as you see fit.
+                </div>
+                <div class="inrtl-readmore" id="inrtl-readmore-6">
+                  <img src="./images/next.svg" alt="">
+                </div>
+              </div>
+              <div class="inrtl-divtd">
+
+              </div>
+              <div class="inrtl-divtd">
+
+              </div>
+            </div>
+          </div>
+          <!-- full cards -->
+          <div class="inrtl-fullcard" id="inrtl-fullcard-0">
+            <h2 class="inrtl-fullcardh2">Business Leading Practices</h2>
+            <div class="inrtl-cstmpr-3">
+              <ol>
+                <li>Creating invoices through the Supplier Portal​.</li>
+                <li>Routing non-PO invoices for approval through job level hierarchy based on DoA​.</li>
+                <li>Enforcing no-PO, no-Pay policy​.</li>
+                <li>Use of OCR or 3rd party imaging solutions which can automate the process of paper based invoice entry.</li>
+                <li>Maximize use of recurring invoices templates and distribution sets for non-purchase order (PO) invoices</li>
+                <li>Invoice entry, invoice approval and payment processing roles should be clearly segregated</li>
+                <li>Laverage Shared service model.</li>
+                <li>Invoices from external sources should be brought in using integration methods like EDI, XML, FBDI, etc.</li>
+                <li>Use purchasing solutions that generate ERS (Electronic Receipts Settlements)</li>
+              </ol>
+            </div>
+          </div>
+          <div class="inrtl-fullcard" id="inrtl-fullcard-1">
+            <h2 class="inrtl-fullcardh2">Application Leading Practices</h2>
+            <div class="inrtl-cstmpr-3">
+              Below is the suggested practice:
+              <ol>
+                <li>Limit manual invoice creation by working with suppliers on interface or OCR options.</li>
+                <li>Use appropriate description for invoice header/line description. Description will be visible during invoice approval notification.</li>
+                <li>For non-merchandise expenses, freight and miscellaneous expenses are usually allocated across invoice lines.</li>
+                <li>Use recurring invoice feature for invoices that have static amount across multiple periods.</li>
+                <li>Use distributions sets for accounting distribution across multiple locations or departments.</li>
+                <li>Use show available prepayment options for system to display available prepayments while entering standard invoice.</li>
+                <li>Use Permanent prepayment feature to deny application of invoices to prepayment.</li>
+                <li>For imported invoices use automated reconciliation process in interfaces to match batch totals.</li>
+                <li>Invoices related to goods should be matched 3-way. Invoices related to services should be matched 2-way.</li>
+                <li>Deferred expenses should be used when multi-period prepayment exists but supplier does not send a monthly invoice.</li>
+                <li>Invoice entry, invoice approval and payment processing roles should be clearly segregated.</li>
+                <li>Use imaging solution which can automate the process of invoice entry.</li>
+              </ol>
+              <ol>
+                <li>Limit manual invoice creation by working with suppliers on interface or OCR options.</li>
+                <li>Use appropriate description for invoice header/line description. Description will be visible during invoice approval notification.</li>
+                <li>For non-merchandise expenses, freight and miscellaneous expenses are usually allocated across invoice lines.</li>
+                <li>Use recurring invoice feature for invoices that have static amount across multiple periods.</li>
+                <li>Use distributions sets for accounting distribution across multiple locations or departments.</li>
+                <li>Use show available prepayment options for system to display available prepayments while entering standard invoice.</li>
+                <li>Use Permanent prepayment feature to deny application of invoices to prepayment.</li>
+                <li>For imported invoices use automated reconciliation process in interfaces to match batch totals.</li>
+                <li>Invoices related to goods should be matched 3-way. Invoices related to services should be matched 2-way.</li>
+                <li>Deferred expenses should be used when multi-period prepayment exists but supplier does not send a monthly invoice.</li>
+                <li>Invoice entry, invoice approval and payment processing roles should be clearly segregated.</li>
+                <li>Use imaging solution which can automate the process of invoice entry.</li>
+              </ol>
+              <ol>
+                <li>Limit manual invoice creation by working with suppliers on interface or OCR options.</li>
+                <li>Use appropriate description for invoice header/line description. Description will be visible during invoice approval notification.</li>
+                <li>For non-merchandise expenses, freight and miscellaneous expenses are usually allocated across invoice lines.</li>
+                <li>Use recurring invoice feature for invoices that have static amount across multiple periods.</li>
+                <li>Use distributions sets for accounting distribution across multiple locations or departments.</li>
+                <li>Use show available prepayment options for system to display available prepayments while entering standard invoice.</li>
+                <li>Use Permanent prepayment feature to deny application of invoices to prepayment.</li>
+                <li>For imported invoices use automated reconciliation process in interfaces to match batch totals.</li>
+                <li>Invoices related to goods should be matched 3-way. Invoices related to services should be matched 2-way.</li>
+                <li>Deferred expenses should be used when multi-period prepayment exists but supplier does not send a monthly invoice.</li>
+                <li>Invoice entry, invoice approval and payment processing roles should be clearly segregated.</li>
+                <li>Use imaging solution which can automate the process of invoice entry.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="inrtl-fullcard" id="inrtl-fullcard-2">
+            <h2 class="inrtl-fullcardh2">Oracle Cloud Enablers</h2>
+            <div class="inrtl-cstmpr-3">
+              <ol>
+                <li>Oracle CMK (B2B gateway) invoices</li>
+                <li>OCR invoices</li>
+                <li>FBDI/ADFDI spreadsheets for Invoice/One time payment/Payment request</li>
+              </ol>
+            </div>
+          </div>
+          <div class="inrtl-fullcard" id="inrtl-fullcard-3">
+            <h2 class="inrtl-fullcardh2">Oracle Cloud Capability</h2>
+            <div class="inrtl-cstmpr-3">
+              Use the Invoices landing page to perform various task when processing invoices. Below are some mazor Oracle cloud capabilities.
+              <ol>
+                <li>Oracle provides 6 out of box infolets displayed on the Invoices landing page for items required attention.</li>
+                <li>Recouring Invoice</li>
+                <li>Creating Invoice using spreadsheet</li>
+                <li>One time payment</li>
+                <li>Payment requests</li>
+              </ol>
+            </div>
+          </div>
+          <div class="inrtl-fullcard" id="inrtl-fullcard-4">
+            <h2 class="inrtl-fullcardh2">Analytics</h2>
+            <div class="inrtl-cstmpr-3">
+              <ol>
+                <li>Oracle dashboards can be used for quick analysis of data.</li>
+                <li>OTBI can be used for enterprise level or supplier level tracking.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="inrtl-fullcard" id="inrtl-fullcard-5">
+            <h2 class="inrtl-fullcardh2">Social Capability</h2>
+            <div class="inrtl-cstmpr-3">
+              Cloud Conversation is available application wide
+            </div>
+          </div>
+          <div class="inrtl-fullcard" id="inrtl-fullcard-6">
+            <h2 class="inrtl-fullcardh2">Deloitte-Market Enablers</h2>
+            <div class="inrtl-cstmpr-3">
+              <ol>
+                <li>Blockchain Source to Settle.</li>
+                <li>Touchless Invoicing for Healthcare Providers</li>
+                <li>Intercompany Blockchain</li>
+                <li>Digital Finance Assitant</li>
+                <li>Blockchain Source to Settle</li>
+                <li>Supply Chain Financing</li>
+                <li>Engineering & Construction PaaS Solutions </li>
+                <li>Localization Accelerator</li>
+                <li>Digital E&C Finance Market Offering - Oracle PaaS Solutions</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="inrtl-panel">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Business Leading Practices</h2>
+              </div>
+              <div class="inrtl-h2td">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th">Heading 1</th>
+                    <th class="inrtl-th">Heading 2</th>
+                    <th class="inrtl-th">Heading 3</th>
+                    <th class="inrtl-th">Heading 4</th>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td">Data 1</td>
+                    <td class="inrtl-td">Data 2</td>
+                    <td class="inrtl-td">Data 3</td>
+                    <td class="inrtl-td">Data 4</td>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td">Data 1</td>
+                    <td class="inrtl-td">Data 2</td>
+                    <td class="inrtl-td">Data 3</td>
+                    <td class="inrtl-td">Data 4</td>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td">Data 1</td>
+                    <td class="inrtl-td">Data 2</td>
+                    <td class="inrtl-td">Data 3</td>
+                    <td class="inrtl-td">Data 4</td>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td">Data 1</td>
+                    <td class="inrtl-td">Data 2</td>
+                    <td class="inrtl-td">Data 3</td>
+                    <td class="inrtl-td">Data 4</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <hr class="inrtl-hrl">
+          <hr class="inrtl-hrs">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Qualitative Value Opportunities</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                <div class="inrtl-divtable">
+                  <div class="inrtl-divtr">
+                    <div class="inrtl-divtd">
+                      <table class="inrtl-table">
+                        <tr class="inrtl-tr">
+                          <th class="inrtl-th inrtl-red">Heading 1</th>
+                        </tr>
+                        <tr class="inrtl-tr">
+                          <td class="inrtl-td inrtl-white">
+                            <strong>Bold Text</strong>
+                            <br />
+                            <ul type="square">
+                              <li>List Item 1</li>
+                              <li>List Item 2</li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="inrtl-divtd">
+                      <table class="inrtl-table">
+                        <tr class="inrtl-tr">
+                          <th class="inrtl-th">Heading 1</th>
+                        </tr>
+                        <tr class="inrtl-tr">
+                          <td class="inrtl-td inrtl-white">
+                            <strong>Bold Text</strong>
+                            <br />
+                            <ul type="square">
+                              <li>List Item 1</li>
+                              <li>List Item 2</li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="inrtl-hrl">
+          <hr class="inrtl-hrs">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Qualitative Value Opportunities</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th">Heading 1</th>
+                    <th class="inrtl-th">Heading 2</th>
+                    <th class="inrtl-th">Heading 3</th>
+                    <th class="inrtl-th">Heading 4</th>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-white">Data 1</td>
+                    <td class="inrtl-white">Data 2</td>
+                    <td class="inrtl-white">Data 3</td>
+                    <td class="inrtl-white">Data 4</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <hr class="inrtl-hrl">
+          <hr class="inrtl-hrs">
+          <div class="inrtl-h2table">
+            <div class="inrtl-h2tr">
+              <div class="inrtl-h2td">
+                <h2 class="inrtl-h2">Qualitative Value Opportunities</h2>
+              </div>
+              <div class="inrtl-h2td inrtl-cstmpr-2">
+                <table class="inrtl-table">
+                  <tr class="inrtl-tr">
+                    <th class="inrtl-th" colspan="2">Heading 1</th>
+                  </tr>
+                  <tr class="inrtl-tr">
+                    <td class="inrtl-td inrtl-white">
+                      <strong>Bold Text</strong>
+                      <br />
+                      <ul type="square">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                      </ul>
+                    </td>
+                    <td class="inrtl-td inrtl-white">
+                      <strong>Bold Text</strong>
+                      <br />
+                      <ul type="square">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inrtl-panel">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="top-button" id="top-button">
+  </div>
+
+  <script type="text/javascript">
+    var smooth_scroll = function(scroll_to) {
+      dscroll_to = Math.min(scroll_to, (document.documentElement.scrollHeight - document.documentElement.offsetHeight));
+      bscroll_to = Math.min(scroll_to, (document.body.scrollHeight - document.body.offsetHeight));
+      var dscroll_interval = setInterval(function() {
+        var leap = (dscroll_to - document.documentElement.scrollTop) / 50;
+        if(leap > 0) leap = leap > 1 ? leap : 1;
+        if(leap < 0) leap = leap < -1 ? leap : -1;
+        document.documentElement.scrollTop += leap;
+        if (Math.abs(leap) === 0) {
+          clearInterval(dscroll_interval);
+        }
+      }, 1);
+      var bscroll_interval = setInterval(function() {
+        var leap = (bscroll_to - document.body.scrollTop) / 50;
+        if(leap > 0) leap = leap > 1 ? leap : 1;
+        if(leap < 0) leap = leap < -1 ? leap : -1;
+        document.body.scrollTop += leap;
+        if (Math.abs(leap) === 0) {
+          clearInterval(bscroll_interval);
+        }
+      }, 1);
+    }
+
+    var sections = document.getElementsByClassName("inrtl-section");
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].addEventListener("click", function() {
+        var j;
+        var panelIndex = -1;
+
+        var allSections = document.getElementsByClassName("inrtl-section");
+        for (j = 0; j < allSections.length; j++) {
+          if (this === allSections[j]) {
+            panelIndex = j;
+          }
+        }
+
+        var activeSections = document.getElementsByClassName("inrtl-active");
+        for (j = 0; j < activeSections.length; j++) {
+          activeSections[j].classList.remove("inrtl-active");
+        }
+        this.classList.add("inrtl-active");
+
+        var allPanels = document.getElementsByClassName("inrtl-panel");
+        var panel = allPanels[panelIndex];
+        for (j = 0; j < allPanels.length; j++) {
+          if (allPanels[j] !== panel) {
+            allPanels[j].style.maxHeight = null;
+            allPanels[j].style.opacity = 0;
+            allPanels[j].style.display = "none";
+          }
+        }
+
+        if (panel.style.maxHeight) {
+          // this.classList.remove("inrtl-active");
+          // panel.style.maxHeight = null;
+          // panel.style.opacity = 0;
+        } else {
+          panel.style.display = "block";
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          setTimeout(function() {
+            panel.style.opacity = 1;
+          }, 1);
+        }
+      });
+    }
+    document.getElementsByClassName("inrtl-panel")[0].style.maxHeight = document.getElementsByClassName("inrtl-panel")[0].scrollHeight + "px";
+    document.getElementsByClassName("inrtl-panel")[0].style.display = "block";
+    document.getElementsByClassName("inrtl-panel")[0].style.opacity = 1;
+
+    var close_cards = function() {
+      var open_card = document.getElementsByClassName("inrtl-active-fullcard")[0];
+      var container = document.getElementsByClassName("inrtl-accordion-container")[0];
+      open_card.style.opacity = 0;
+      container.style.opacity = 1;
+      container.style.cursor = "unset";
+      container.style.height = (document.scrollingElement ? document.scrollingElement.scrollHeight : document.body.scrollHeight) + "px";
+      setTimeout(function() {
+        open_card.classList.remove('inrtl-active-fullcard');
+        document.getElementsByClassName("inrtl-accordion-container")[0].removeEventListener("click", close_cards);
+      }, 200);
+    }
+
+    var cards = document.getElementsByClassName("inrtl-card");
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].addEventListener("click", function() {
+        if (this.id) {
+          var fullcardid = "inrtl-fullcard-" + this.id.split('inrtl-card-')[1];
+          var fullcardlocation = document.getElementById(fullcardid).offsetTop;
+          smooth_scroll(fullcardlocation);
+        }
+      });
+
+      cards[i].addEventListener("mouseover", function() {
+        if (this.id) {
+          var readmoreid = "inrtl-readmore-" + this.id.split('inrtl-card-')[1];
+          var readmore = document.getElementById(readmoreid);
+          setTimeout(function() {
+            readmore.style.opacity = 1;
+          }, 1);
+        }
+      });
+
+      cards[i].addEventListener("mouseout", function() {
+        if (this.id) {
+          var readmoreid = "inrtl-readmore-" + this.id.split('inrtl-card-')[1];
+          var readmore = document.getElementById(readmoreid);
+          setTimeout(function() {
+            readmore.style.opacity = 0;
+          }, 1);
+        }
+      });
+    }
+
+    document.getElementById('top-button').addEventListener("click", function() {
+      smooth_scroll(0);
+    });
+
+    document.addEventListener("scroll", function() {
+      if(this.documentElement.scrollTop > (this.documentElement.offsetHeight / 2) && document.getElementById('top-button').style.opacity == 0) {
+        document.getElementById('top-button').classList.add("top-button-active");
+      } else {
+        document.getElementById('top-button').classList.remove("top-button-active");
+      }
+    })
+  </script>
+
+</body>
+
+</html>
