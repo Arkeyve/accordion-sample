@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html class="i-html" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body class="i-body">
+  <style media="screen">
+    /*** FONTS ***/
+    @font-face {
+      font-family: opensans;
+      src: url(./fonts/open_sans/OpenSans-Light.ttf);
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: opensans;
+      src: url(./fonts/open_sans/OpenSans-Regular.ttf);
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: opensans;
+      src: url(./fonts/open_sans/OpenSans-SemiBold.ttf);
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: opensans;
+      src: url(./fonts/open_sans/OpenSans-Bold.ttf);
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: opensans;
+      src: url(./fonts/open_sans/OpenSans-ExtraBold.ttf);
+      font-weight: 800;
+    }
+
+    @font-face {
+      font-family: roboto;
+      src: url(./fonts/roboto/Roboto-Light.ttf);
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: roboto;
+      src: url(./fonts/roboto/Roboto-Regular.ttf);
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: roboto;
+      src: url(./fonts/roboto/Roboto-Medium.ttf);
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: roboto;
+      src: url(./fonts/roboto/Roboto-Bold.ttf);
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: roboto;
+      src: url(./fonts/roboto/Roboto-Black.ttf);
+      font-weight: 800;
+    }
+
+    /*** FRAMEWORK ***/
+    .i-spacer-1em {
+      height: 1em;
+    }
+
+    .i-divtable {
+      display: table;
+      width: 100%;
+    }
+
+    .i-divtable-fixedlayout {
+      table-layout: fixed;
+    }
+
+    .i-divtable-spaced {
+      border-spacing: 1em;
+    }
+
+    .i-divtable-row {
+      display: table-row;
+    }
+
+    .i-divtable-cell {
+      display: table-cell;
+    }
+
+    .i-fl-left {
+      float: left;
+    }
+
+    .i-fl-right {
+      float: right;
+    }
+
+    .i-white {
+      color: #fff;
+    }
+
+    .i-center {
+      text-align: center;
+    }
+
+    .i-h1 {
+      font-size: 3em;
+      font-weight: 700;
+    }
+
+    .i-h2 {
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+
+    .i-h3 {
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    .i-h4 {
+      font-size: 1.6em;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .i-h5 {
+      font-size: 1.4em;
+      font-weight: 600;
+      font-family: roboto;
+      margin: 0;
+    }
+
+    .i-p {
+      font-family: roboto;
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    .i-valign-top {
+      vertical-align: top;
+    }
+
+    .i-valign-bottom {
+      vertical-align: bottom;
+    }
+
+    .i-valign-middle {
+      vertical-align: middle;
+    }
+
+    .i-columnspacer-2em {
+      width: 2em;
+    }
+
+    .i-columnspacer-10em {
+      width: 10em;
+    }
+
+    /*** BODY ****/
+    .i-html,
+    .i-body {
+      margin: 0px;
+      height: 100%;
+      font-family: opensans;
+      color: #222;
+    }
+
+    /*** NAVBAR ****/
+    .i-navbar {
+      height: 5em;
+      line-height: 5em;
+      vertical-align: middle;
+      background-color: #000;
+      width: 100%;
+      color: #ddd;
+      position: relative;
+    }
+
+    #i-navbar-logo {
+      height: 60%;
+      font-size: 3em;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      margin-left: 0.5em;
+    }
+
+    .i-navbar-itemlist {
+      position: absolute;
+      right: 4em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .i-navbar-link {
+      display: block;
+      float: left;
+      height: 100%;
+      text-align: center;
+      padding: 0 2em;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+
+    .i-navbar-link:hover {
+      text-decoration: underline;
+      text-decoration-color: #666;
+    }
+
+    /*** MAIN ***/
+    .i-main-wrapper {
+      background-image: url(./images/Second_page_green_waves.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      min-height: 100%;
+      padding: 0 10em;
+    }
+
+    .i-h1max {
+      font-size: 9em;
+      line-height: 0.5em;
+      margin: 0;
+    }
+
+    .i-transition-box {
+      width: 16em;
+      height: 22em;
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-size: contain;
+      box-shadow: 0 5px 10px -1px #aaa;
+      position: relative;
+      transition: 0.4s;
+    }
+
+    .i-tbox-t1 {
+      height: 28em;
+    }
+
+    .i-bg-content {
+      position: absolute;
+      top: 0;
+      min-width: 13em;
+      min-width: -webkit-fill-available;
+      min-width: -moz-available;
+      min-height: 18.8em;
+      min-height: -webkit-fill-available;
+      min-height: -moz-available;
+      padding: 0.5em;
+      font-weight: 700;
+      margin: 1em;
+      border: 2px solid #BCBCBC;
+      border-radius: 3px;
+    }
+
+    .i-bgc-t1 {
+      min-height: 24.8em;
+      min-height: -webkit-fill-available;
+      min-height: -moz-available;
+    }
+
+    .i-fg-content {
+      position: absolute;
+      top: 0;
+      min-width: 16.3em;
+      min-width: -webkit-fill-available;
+      min-width: -moz-available;
+      min-height: 22em;
+      min-height: -webkit-fill-available;
+      min-height: -moz-available;
+      font-weight: 700;
+      border-radius: 2px;
+      color: #fff;
+      background-color: #002E5C;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .i-fgc-t1 {
+      min-height: 28em;
+      min-height: -webkit-fill-available;
+      min-height: -moz-available;
+      min-width: 22.6em;
+      min-width: -webkit-fill-available;
+      min-width: -moz-available;
+    }
+
+    .i-fg-content-hover {
+      position: absolute;
+      top: 0;
+      min-width: 13em;
+      min-width: -webkit-fill-available;
+      min-width: -moz-available;
+      min-height: 19.2em;
+      min-height: -webkit-fill-available;
+      min-height: -moz-available;
+      padding: 0.3em;
+      margin: 1em;
+      border: 2px solid #BCBCBC;
+      border-radius: 3px;
+    }
+
+    .i-fgch-t1 {
+      min-height: 25.2em;
+      min-height: -webkit-fill-available;
+      min-height: -moz-available;
+    }
+
+    .i-fg-content:hover {
+      opacity: 1;
+    }
+
+    .i-switchbox-cell {
+      width: 25%;
+    }
+
+    .i-switchcontent-cell {
+      width: 75%;
+      position: relative;
+    }
+
+    .i-switchbox {
+      height: 7em;
+      border: 2px solid #fff;
+      color: #fff;
+      transition: 0.4s;
+      background-color: #002E5C;
+      vertical-align: middle;
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    .i-switchbox.i-switchbox-active {
+      border: 2px solid #FFC914;
+      border-right: 15px solid #FFC914;
+    }
+
+    .i-switchcontent {
+      height: 16em;
+      width: 80%;
+    }
+
+    .i-content-wrapper {
+      opacity: 0;
+      display: none;
+      transition: 0.4s;
+      position: absolute;
+      top: 0;
+    }
+
+    .i-blackbox {
+      background-color: #2F2F2F;
+      border-radius: 4px;
+      padding: 0.6em;
+      font-size: 1.4em;
+      color: #fff;
+    }
+
+    .i-ul-t0 {
+      font-weight: 400;
+    }
+
+    .i-li-t0 {
+      padding: 0.3em 0em;
+    }
+
+    .i-fg-content-p {
+      font-size: 1.3em;
+      font-weight: 400;
+      padding: 0.5em;
+    }
+
+    .i-content-header-t0 {
+      font-weight: 700;
+      border-bottom: 2px dashed #000;
+    }
+
+    .i-blue-btn {
+      padding: 1em;
+      font-size: 1.2em;
+      background-color: #002E5C;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="i-body">
+    <!-- NAVBAR -->
+    <div class="i-navbar">
+      <img id="i-navbar-logo" src="./images/deloitte_w.png" alt="Deloitte.">
+      <div class="i-navbar-itemlist">
+        <a href="./index.html" class="i-navbar-link">Home</a>
+        <a href="#" class="i-navbar-link">About</a>
+        <a href="#" class="i-navbar-link">Report a Bug</a>
+        <a href="#" class="i-navbar-link">FAQ</a>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="i-main-wrapper">
+      <!-- TITLE 1 -->
+      <div class="i-divtable">
+        <div class="i-divtable-row i-center">
+          <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+          <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+          <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+          <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+          <div class="i-divtable-cell">
+            <h1 class="i-h1"><span style="font-weight: 400;">Deloitte's</span> Enterprise Value Methodology</h1>
+            <p class="i-p">Deloitte’s EVM framework provides a mechanism to aggregate benefits from process and platform improvement initiatives.</p>
+          </div>
+          <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+          <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+          <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+          <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+        </div>
+      </div>
+      <div class="i-spacer-1em">&nbsp;</div>
+      <div class="i-spacer-1em">&nbsp;</div>
+      <!-- CONTENT TABLE -->
+      <div class="i-divtable i-divtable-spaced">
+        <div class="i-divtable-row">
+          <!-- SWITCH BOX -->
+          <div class="i-divtable-cell i-switchbox-cell">
+            <div class="i-divtable">
+              <div class="i-divtable-row">
+                <div class="i-divtable-cell i-switchbox i-switchbox-active" id="i-switchbox-0">
+                  <div class="i-divtable i-divtable-spaced">
+                    <div class="i-divtable-row">
+                      <div class="i-divtable-cell">
+                        Enterprise Value Map
+                      </div>
+                      <div class="i-divtable-cell i-valign-middle">
+                        <img src="./images/Second_page_arrow.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="i-divtable-row">
+                <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+              </div>
+              <div class="i-divtable-row">
+                <div class="i-divtable-cell i-switchbox" id="i-switchbox-1">
+                  <div class="i-divtable i-divtable-spaced">
+                    <div class="i-divtable-row">
+                      <div class="i-divtable-cell">
+                        Value Journey Map
+                      </div>
+                      <div class="i-divtable-cell i-valign-middle">
+                        <img src="./images/Second_page_arrow.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CONTENT 0 -->
+          <div class="i-divtable-cell i-switchcontent-cell">
+            <div class="i-content-wrapper" id="i-content-wrapper-0">
+              <div class="i-divtable">
+                <div class="i-divtable-row">
+                  <div class="i-divtable i-divtable-fixedlayout">
+                    <div class="i-divtable-row">
+                      <div class="i-divtable-cell">&nbsp;</div>
+                      <div class="i-divtable-cell i-center">
+                        <div class="i-blackbox">
+                          Shareholder Values
+                        </div>
+                      </div>
+                      <div class="i-divtable-cell">&nbsp;</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="i-divtable-row">
+                  <div class="i-divtable-cell">
+                    &nbsp;<!-- lines -->
+                  </div>
+                </div>
+                <div class="i-divtable-row">
+                  <div class="i-divtable-cell">
+                    <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+                      <div class="i-divtable-row">
+                        <div class="i-divtable-cell i-transition-box">
+                          <!-- BG -->
+                          <div class="i-bg-content">
+                            <h4 class="i-h4">Operating Margin</h4>
+                            <ul class="i-ul-t0">
+                              <li class="i-li-t0">Selling, General & Administrative (SG&A)</li>
+                              <li class="i-li-t0">Taxes</li>
+                              <li class="i-li-t0">COGS</li>
+                            </ul>
+                          </div>
+                          <!-- FG -->
+                          <div class="i-fg-content">
+                            <div class="i-fg-content-hover">
+                              <p class="i-fg-content-p">Descriptive text for operating margin.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="i-divtable-cell i-transition-box">
+                          <!-- BG -->
+                          <div class="i-bg-content">
+                            <h4 class="i-h4">Revenue Growth</h4>
+                            <ul class="i-ul-t0">
+                              <li class="i-li-t0">Price Realization</li>
+                              <li class="i-li-t0">Margin</li>
+                            </ul>
+                          </div>
+                          <!-- FG -->
+                          <div class="i-fg-content">
+                            <div class="i-fg-content-hover">
+                              <p class="i-fg-content-p">Descriptive text for revenue growth.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="i-divtable-cell i-transition-box">
+                          <!-- BG -->
+                          <div class="i-bg-content">
+                            <h4 class="i-h4">Expectations</h4>
+                            <ul class="i-ul-t0">
+                              <li class="i-li-t0">External Factors</li>
+                              <li class="i-li-t0">Company Strength</li>
+                            </ul>
+                          </div>
+                          <!-- FG -->
+                          <div class="i-fg-content">
+                            <div class="i-fg-content-hover">
+                              <p class="i-fg-content-p">Descriptive text for expectations.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="i-divtable-cell i-transition-box">
+                          <!-- BG -->
+                          <div class="i-bg-content">
+                            <h4 class="i-h4">Asset Efficiency</h4>
+                            <ul class="i-ul-t0">
+                              <li class="i-li-t0">Inventory</li>
+                              <li class="i-li-t0">Property, Plan & Equipment (PP&E)</li>
+                              <li class="i-li-t0">Receivables</li>
+                              <li class="i-li-t0">Payables</li>
+                            </ul>
+                          </div>
+                          <!-- FG -->
+                          <div class="i-fg-content">
+                            <div class="i-fg-content-hover">
+                              <p class="i-fg-content-p">Descriptive text for operating margin.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- CONTENT 1 -->
+            <div class="i-content-wrapper" id="i-content-wrapper-1">
+              <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+                <div class="i-divtable-row">
+                  <div class="i-divtable-cell i-content-header-t0">
+                    Value Identification
+                  </div>
+                  <div class="i-divtable-cell i-content-header-t0">
+                    Value Enablement
+                  </div>
+                  <div class="i-divtable-cell i-content-header-t0">
+                    Value Innovation
+                  </div>
+                </div>
+                <div class="i-divtable-row">
+                  <div class="i-divtable-cell i-transition-box i-tbox-t1">
+                    <!-- BG -->
+                    <div class="i-bg-content i-bgc-t1">
+                      <h5 class="i-h5">Define a strategic vision and identify opportunities and associated capabilities by priority where value can be identified.</h5>
+                      <ul class="i-ul-t0">
+                        <li class="i-li-t0">Enterprise Value Methodology (EVM)</li>
+                        <li class="i-li-t0">Assessment Model</li>
+                        <li class="i-li-t0">Industry Benchmarking</li>
+                        <li class="i-li-t0">Cost & Benefit Analysis</li>
+                        <li class="i-li-t0">Value Proposition</li>
+                      </ul>
+                    </div>
+                    <!-- FG -->
+                    <div class="i-fg-content i-fgc-t1">
+                      <div class="i-fg-content-hover i-fgch-t1">
+                        <p class="i-fg-content-p">Descriptive text for operating margin.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="i-divtable-cell i-transition-box i-tbox-t1">
+                    <!-- BG -->
+                    <div class="i-bg-content i-bgc-t1">
+                      <h5 class="i-h5">For the selected capabilities, complete the work and track value realised by comparing against benchmarks.</h5>
+                      <ul class="i-ul-t0">
+                        <li class="i-li-t0">Oracle Cloud Capabilities</li>
+                        <li class="i-li-t0">Deloitte Market Enablers</li>
+                        <li class="i-li-t0">Digital Solutions & Technologies</li>
+                        <li class="i-li-t0">Leading & Industry Practices</li>
+                        <li class="i-li-t0">Process Maps</li>
+                      </ul>
+                    </div>
+                    <!-- FG -->
+                    <div class="i-fg-content i-fgc-t1">
+                      <div class="i-fg-content-hover i-fgch-t1">
+                        <p class="i-fg-content-p">Descriptive text for operating margin.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="i-divtable-cell i-transition-box i-tbox-t1">
+                    <!-- BG -->
+                    <div class="i-bg-content i-bgc-t1">
+                      <h5 class="i-h5">Drive continuous insights into new opportunities.</h5>
+                      <ul class="i-ul-t0">
+                        <li class="i-li-t0">Digital Analytics</li>
+                        <li class="i-li-t0">Value Tracking Pilot</li>
+                        <li class="i-li-t0">Business Case Scorecard</li>
+                        <li class="i-li-t0">Digital Foundry</li>
+                        <li class="i-li-t0">Business Case Tool (2.0)</li>
+                      </ul>
+                    </div>
+                    <!-- FG -->
+                    <div class="i-fg-content i-fgc-t1">
+                      <div class="i-fg-content-hover i-fgch-t1">
+                        <p class="i-fg-content-p">Descriptive text for operating margin.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="i-blue-btn i-fl-right">
+        O2 Value Map
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // switch active box
+    var sw_boxes = document.getElementsByClassName("i-switchbox");
+    document.getElementById("i-content-wrapper-0").style.display = "block";
+    document.getElementById("i-content-wrapper-0").style.opacity = 1;
+    for(var i = 0; i < sw_boxes.length; i++) {
+      sw_boxes[i].addEventListener("click", function() {
+        if (!this.classList.contains("i-switchbox-active")) {
+          var active_index = this.id.split("i-switchbox-")[1];
+          var all_active = document.getElementsByClassName("i-switchbox-active");
+          var all_active_len = all_active.length;
+          for(var j = 0; j < all_active_len; j++) {
+            var inactive_index = all_active[j].id.split("i-switchbox-")[1];
+            var all_active_content = document.getElementById("i-content-wrapper-" + inactive_index);
+            all_active_content.style.opacity = 0;
+            setTimeout(function() {
+              all_active_content.style.display = "none";
+            }, 1);
+
+            all_active[j].classList.remove("i-switchbox-active");
+
+            if(j === all_active_len - 1) {
+              this.classList.add("i-switchbox-active");
+
+              var active_content = document.getElementById("i-content-wrapper-" + active_index);
+              active_content.style.display = "block";
+              setTimeout(function() {
+                active_content.style.opacity = 1;
+              }, 1);
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
