@@ -1,0 +1,428 @@
+<style media="screen">
+  /*** FONTS ***/
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-Light.ttf);
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-Regular.ttf);
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-Bold.ttf);
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-ExtraBold.ttf);
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Light.ttf);
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Regular.ttf);
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Medium.ttf);
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Bold.ttf);
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Black.ttf);
+    font-weight: 800;
+  }
+
+  /*** FRAMEWORK ***/
+  .i-spacer-1em {
+    height: 1em;
+  }
+
+  .i-divtable {
+    display: table;
+    width: 100%;
+  }
+
+  .i-divtable-fixedlayout {
+    table-layout: fixed;
+  }
+
+  .i-divtable-spaced {
+    border-spacing: 1em;
+  }
+
+  .i-divtable-row {
+    display: table-row;
+  }
+
+  .i-divtable-cell {
+    display: table-cell;
+  }
+
+  .i-white {
+    color: #fff;
+  }
+
+  .i-center {
+    text-align: center;
+  }
+
+  .i-h1 {
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  .i-h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  .i-h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+
+  .i-p {
+    font-family: roboto;
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .i-valign-top {
+    vertical-align: top;
+  }
+
+  .i-valign-bottom {
+    vertical-align: bottom;
+  }
+
+  .i-valign-middle {
+    vertical-align: middle;
+  }
+
+  .i-columnspacer-2em {
+    width: 2em;
+  }
+
+  /*** BODY ****/
+  .i-html,
+  .i-body {
+    margin: 0px;
+    height: 100%;
+    font-family: opensans;
+    color: #222;
+  }
+
+  /*** NAVBAR ****/
+  .i-navbar {
+    height: 5em;
+    line-height: 5em;
+    vertical-align: middle;
+    background-color: #000;
+    width: 100%;
+    color: #ddd;
+    position: relative;
+  }
+
+  #i-navbar-logo {
+    height: 60%;
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-left: 0.5em;
+  }
+
+  .i-navbar-itemlist {
+    position: absolute;
+    right: 4em;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .i-navbar-link {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    padding: 0 2em;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+
+  .i-navbar-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #666;
+  }
+
+  /*** MAIN ***/
+  .i-main-wrapper {
+    background-image: url(./images/Landing_page_green_waves.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    padding: 0 10em;
+  }
+
+  .i-h1max {
+    font-size: 9em;
+    line-height: 0.5em;
+    margin: 0;
+  }
+
+  .i-transition-box {
+    width: 16em;
+    height: 16em;
+    background-color: #fff;
+    background-image: url(./images/Card_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0 5px 10px -1px #aaa;
+    position: relative;
+  }
+
+  .i-bg-content {
+    height: 100%;
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  .i-fg-content {
+    height: 100%;
+    position: absolute;
+    font-size: 1.3em;
+    font-weight: 400;
+    opacity: 0;
+    transition: 0.4s;
+    background-color: #002E5C;
+    cursor: pointer;
+    border: 2px solid #fff;
+    background-image: url(./images/Card_goto_hover_icon.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-origin: content-box;
+  }
+
+  .i-fg-content:hover {
+    opacity: 1;
+  }
+</style>
+
+<div class="i-body">
+  <!-- NAVBAR -->
+  <div class="i-navbar">
+    <img id="i-navbar-logo" src="./images/deloitte_w.png" alt="Deloitte.">
+    <div class="i-navbar-itemlist">
+      <a href="#" class="i-navbar-link">Home</a>
+      <a href="#" class="i-navbar-link">About</a>
+      <a href="#" class="i-navbar-link">Report a Bug</a>
+      <a href="#" class="i-navbar-link">FAQ</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="i-main-wrapper">
+    <!-- TITLE 1 -->
+    <div class="i-divtable">
+      <div class="i-divtable-row i-center">
+        <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+        <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+        <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+        <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+        <div class="i-divtable-cell">
+          <h1 class="i-h1 i-white">Value Realization and Continuum Framework</h1>
+          <p class="i-p">Identify, Track and Innovate your Potential Value Opportunities, Value Realization & Continuum Framework gives you a mechanism to identify, enable and track the value delivered by implementing Digital Finance Solutions at
+            and beyond Go Live.</p>
+        </div>
+        <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+        <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+        <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+        <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
+      </div>
+    </div>
+    <!-- TITLE 2 -->
+    <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+      <div class="i-divtable-row">
+        <div class="i-divtable-cell">
+          <h2 class="i-h2 i-center">Value Identification</h2>
+          <div class="i-divtable">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell">
+                <h1 class="i-h1 i-white i-h1max">1</h1>
+              </div>
+              <div class="i-divtable-cell i-valign-top">
+                <p class="i-p">Business case for Digital Finance and KPI Improvement Targets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="i-divtable-cell">
+          <h2 class="i-h2 i-center">Value Enablement</h2>
+          <div class="i-divtable">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell">
+                <h1 class="i-h1 i-white i-h1max">2</h1>
+              </div>
+              <div class="i-divtable-cell i-valign-top">
+                <p class="i-p">Value realization tracking by measuring KPIs against targets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="i-divtable-cell">
+          <h2 class="i-h2 i-center">Value Innovation</h2>
+          <div class="i-divtable">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell">
+                <h1 class="i-h1 i-white i-h1max">3</h1>
+              </div>
+              <div class="i-divtable-cell i-valign-top">
+                <p class="i-p">Continuous KPI improvement with Digital Foundry (Operate + Innovate)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="i-spacer-1em">&nbsp;</div>
+    <div class="i-spacer-1em">&nbsp;</div>
+    <!-- NAVIGATION BOXES -->
+    <div class="i-divtable i-divtable-spaced">
+      <div class="i-divtable-row">
+        <div class="i-divtable-cell">
+          <h3 class="i-h3">O2 Value Map</h3>
+          <p class="i-p">A guided tool to identify value creation opportunities and map it to the right Oracle cloud and Deloitte solutions backed by leading industry and application practices.</p>
+        </div>
+        <!-- CARDS -->
+        <div class="i-divtable-cell i-transition-box">
+          <!-- CARD-BG -->
+          <div class="i-divtable i-bg-content">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-top">
+                <img src="./images/EVM_Icon.png" alt="">
+              </div>
+            </div>
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-bottom">
+                Enterprise Value Methodology
+              </div>
+            </div>
+          </div>
+          <!-- CARD-FG -->
+          <div class="i-divtable i-fg-content" onclick="window.location='./evm.html'">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-middle i-white">
+                Understanding value levers that directly support the strategic drivers of the business.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="i-divtable-cell i-transition-box">
+          <!-- CARD-BG -->
+          <div class="i-divtable i-bg-content">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-top">
+                <img src="./images/KPI_Icon.png" alt="">
+              </div>
+            </div>
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-bottom">
+                Key Performance Indicators
+              </div>
+            </div>
+          </div>
+          <!-- CARD-FG -->
+          <div class="i-divtable i-fg-content">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-middle i-white">
+                How should performance in these processed be measured?
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="i-divtable-cell i-transition-box">
+          <!-- CARD-BG -->
+          <div class="i-divtable i-bg-content">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-top">
+                <img src="./images/next_gen_Icon.png" alt="">
+              </div>
+            </div>
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-bottom">
+                Next Gen Journeys
+              </div>
+            </div>
+          </div>
+          <!-- CARD-FG -->
+          <div class="i-divtable i-fg-content">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-middle i-white">
+                Focusing on journey maps for continuous improvement.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="i-divtable-cell i-transition-box">
+          <!-- CARD-BG -->
+          <div class="i-divtable i-bg-content">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-top">
+                <img src="./images/Deloitte_Sol__Icon.png" alt="">
+              </div>
+            </div>
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-bottom">
+                Deloitte Solutions
+              </div>
+            </div>
+          </div>
+          <!-- CARD-FG -->
+          <div class="i-divtable i-fg-content">
+            <div class="i-divtable-row">
+              <div class="i-divtable-cell i-valign-middle i-white">
+                Drive digital transformation now with Deloitte and Oracle.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+</script>

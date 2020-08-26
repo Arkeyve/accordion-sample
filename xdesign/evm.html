@@ -489,7 +489,8 @@
                 </div>
                 <div class="i-divtable-row">
                   <div class="i-divtable-cell">
-                    &nbsp;<!-- lines -->
+                    &nbsp;
+                    <!-- lines -->
                   </div>
                 </div>
                 <div class="i-divtable-row">
@@ -658,13 +659,13 @@
     var sw_boxes = document.getElementsByClassName("i-switchbox");
     document.getElementById("i-content-wrapper-0").style.display = "block";
     document.getElementById("i-content-wrapper-0").style.opacity = 1;
-    for(var i = 0; i < sw_boxes.length; i++) {
+    for (var i = 0; i < sw_boxes.length; i++) {
       sw_boxes[i].addEventListener("click", function() {
         if (!this.classList.contains("i-switchbox-active")) {
           var active_index = this.id.split("i-switchbox-")[1];
           var all_active = document.getElementsByClassName("i-switchbox-active");
           var all_active_len = all_active.length;
-          for(var j = 0; j < all_active_len; j++) {
+          for (var j = 0; j < all_active_len; j++) {
             var inactive_index = all_active[j].id.split("i-switchbox-")[1];
             var all_active_content = document.getElementById("i-content-wrapper-" + inactive_index);
             all_active_content.style.opacity = 0;
@@ -674,7 +675,7 @@
 
             all_active[j].classList.remove("i-switchbox-active");
 
-            if(j === all_active_len - 1) {
+            if (j === all_active_len - 1) {
               this.classList.add("i-switchbox-active");
 
               var active_content = document.getElementById("i-content-wrapper-" + active_index);
