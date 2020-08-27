@@ -76,7 +76,10 @@
 
     .i-divtable {
       display: table;
-      width: 100%;
+    }
+
+    .i-divtable-main {
+      margin: 0 10em;
     }
 
     .i-divtable-fixedlayout {
@@ -135,12 +138,12 @@
     .i-h5 {
       font-size: 1.4em;
       font-weight: 600;
-      font-family: roboto;
+      font-family: roboto, Arial;
       margin: 0;
     }
 
     .i-p {
-      font-family: roboto;
+      font-family: roboto, Arial;
       font-size: 1.5em;
       margin: 0;
     }
@@ -165,12 +168,16 @@
       width: 10em;
     }
 
+    .i-width-100 {
+      width: 100%;
+    }
+
     /*** BODY ****/
     .i-html,
     .i-body {
       margin: 0px;
       height: 100%;
-      font-family: opensans;
+      font-family: opensans, Arial;
       color: #222;
     }
 
@@ -203,30 +210,32 @@
       margin: auto;
     }
 
-    .i-navbar-link {
+    .i-navbar-link, .i-navbar-link:visited, .i-navbar-link:link, .i-navbar-link:active {
       display: block;
       float: left;
       height: 100%;
       text-align: center;
       padding: 0 2em;
-      text-decoration: none;
-      color: #fff;
+      text-decoration: none !important;
+      color: #fff !important;
       font-size: 1.3em;
       font-weight: 400;
+      font-family: opensans, Arial;
     }
 
     .i-navbar-link:hover {
-      text-decoration: underline;
-      text-decoration-color: #666;
+      text-decoration: underline !important;
+      text-decoration-color: #666 !important;
     }
 
     /*** MAIN ***/
     .i-main-wrapper {
       background-image: url(./images/Second_page_green_waves.png);
-      background-size: contain;
+      background-position: top center;
+      background-size: auto;
       background-repeat: no-repeat;
-      min-height: 100%;
-      padding: 0 10em;
+      min-height: 630px;
+      /* padding: 0 10em; */
     }
 
     .i-h1max {
@@ -237,76 +246,77 @@
 
     .i-transition-box {
       width: 16em;
-      height: 22em;
+      /* height: 22em; */
+      /* position: relative; */
       background-color: #fff;
       background-repeat: no-repeat;
       background-size: contain;
       box-shadow: 0 5px 10px -1px #aaa;
-      position: relative;
       transition: 0.4s;
     }
 
     .i-tbox-t1 {
-      height: 28em;
+      /* height: 28em; */
     }
 
     .i-bg-content {
-      position: absolute;
+      /* position: absolute;
       top: 0;
       min-width: 13em;
       min-width: -webkit-fill-available;
       min-width: -moz-available;
       min-height: 18.8em;
       min-height: -webkit-fill-available;
-      min-height: -moz-available;
+      min-height: -moz-available; */
       padding: 0.5em;
       font-weight: 700;
       margin: 1em;
-      border: 2px solid #BCBCBC;
-      border-radius: 3px;
+      /* border: 2px solid #BCBCBC; */
+      /* border-radius: 3px; */
     }
 
     .i-bgc-t1 {
-      min-height: 24.8em;
+      /* min-height: 24.8em;
       min-height: -webkit-fill-available;
-      min-height: -moz-available;
+      min-height: -moz-available; */
     }
 
     .i-fg-content {
-      position: absolute;
+      /* position: absolute;
       top: 0;
       min-width: 16.3em;
       min-width: -webkit-fill-available;
       min-width: -moz-available;
       min-height: 22em;
       min-height: -webkit-fill-available;
-      min-height: -moz-available;
+      min-height: -moz-available; */
       font-weight: 700;
       border-radius: 2px;
       color: #fff;
       background-color: #002E5C;
       opacity: 0;
       transition: 0.4s;
+      display: none;
     }
 
     .i-fgc-t1 {
-      min-height: 28em;
+      /* min-height: 28em;
       min-height: -webkit-fill-available;
       min-height: -moz-available;
       min-width: 22.6em;
       min-width: -webkit-fill-available;
-      min-width: -moz-available;
+      min-width: -moz-available; */
     }
 
     .i-fg-content-hover {
-      position: absolute;
+      /* position: absolute;
       top: 0;
       min-width: 13em;
       min-width: -webkit-fill-available;
       min-width: -moz-available;
       min-height: 19.2em;
       min-height: -webkit-fill-available;
-      min-height: -moz-available;
+      min-height: -moz-available; */
       padding: 0.3em;
       margin: 1em;
       border: 2px solid #BCBCBC;
@@ -314,9 +324,9 @@
     }
 
     .i-fgch-t1 {
-      min-height: 25.2em;
+      /* min-height: 25.2em;
       min-height: -webkit-fill-available;
-      min-height: -moz-available;
+      min-height: -moz-available; */
     }
 
     .i-fg-content:hover {
@@ -328,8 +338,9 @@
     }
 
     .i-switchcontent-cell {
-      width: 75%;
-      position: relative;
+      /* width: 75%;
+      position: relative; */
+      vertical-align: top;
     }
 
     .i-switchbox {
@@ -357,8 +368,8 @@
       opacity: 0;
       display: none;
       transition: 0.4s;
-      position: absolute;
-      top: 0;
+      /* position: absolute;
+      top: 0; */
     }
 
     .i-blackbox {
@@ -371,6 +382,7 @@
 
     .i-ul {
       font-weight: 400;
+      border-left: 2px dashed #b2b2b2;
     }
 
     .i-li {
@@ -403,6 +415,7 @@
       border-radius: 5px;
       color: #fff;
       cursor: pointer;
+      margin: 0 2em 2em 2em;
     }
   </style>
 
@@ -421,7 +434,7 @@
     <!-- MAIN -->
     <div class="i-main-wrapper">
       <!-- TITLE 1 -->
-      <div class="i-divtable">
+      <div class="i-divtable i-divtable-main">
         <div class="i-divtable-row i-center">
           <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
           <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
@@ -483,7 +496,7 @@
             <div class="i-content-wrapper" id="i-content-wrapper-0">
               <div class="i-divtable">
                 <div class="i-divtable-row">
-                  <div class="i-divtable i-divtable-fixedlayout">
+                  <div class="i-divtable i-divtable-fixedlayout i-width-100">
                     <div class="i-divtable-row">
                       <div class="i-divtable-cell">&nbsp;</div>
                       <div class="i-divtable-cell i-center">
@@ -503,7 +516,7 @@
                 </div>
                 <div class="i-divtable-row">
                   <div class="i-divtable-cell">
-                    <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+                    <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced i-width-100">
                       <div class="i-divtable-row">
                         <div class="i-divtable-cell i-transition-box">
                           <!-- BG -->
@@ -580,7 +593,7 @@
             </div>
             <!-- CONTENT 1 -->
             <div class="i-content-wrapper" id="i-content-wrapper-1">
-              <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+              <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced i-width-100">
                 <div class="i-divtable-row">
                   <div class="i-divtable-cell i-content-header-t0">
                     Value Identification

@@ -76,7 +76,10 @@
 
     .i-divtable {
       display: table;
-      width: 100%;
+    }
+
+    .i-divtable-main {
+      margin: 0 10em;
     }
 
     .i-divtable-fixedlayout {
@@ -119,7 +122,7 @@
     }
 
     .i-p {
-      font-family: roboto;
+      font-family: roboto, Arial;
       font-size: 1.5em;
       margin: 0;
     }
@@ -145,7 +148,7 @@
     .i-body {
       margin: 0px;
       height: 100%;
-      font-family: opensans;
+      font-family: opensans, Arial;
       color: #222;
     }
 
@@ -178,30 +181,32 @@
       margin: auto;
     }
 
-    .i-navbar-link {
+    .i-navbar-link, .i-navbar-link:visited, .i-navbar-link:link, .i-navbar-link:active {
       display: block;
       float: left;
       height: 100%;
       text-align: center;
       padding: 0 2em;
-      text-decoration: none;
-      color: #fff;
+      text-decoration: none !important;
+      color: #fff !important;
       font-size: 1.3em;
       font-weight: 400;
+      font-family: opensans, Arial;
     }
 
     .i-navbar-link:hover {
-      text-decoration: underline;
-      text-decoration-color: #666;
+      text-decoration: underline !important;
+      text-decoration-color: #666 !important;
     }
 
     /*** MAIN ***/
     .i-main-wrapper {
       background-image: url(./images/Landing_page_green_waves.png);
-      background-size: contain;
+      background-position: top center;
+      background-size: auto;
       background-repeat: no-repeat;
-      min-height: 100%;
-      padding: 0 10em;
+      min-height: 630px;
+      /* padding: 0 10em; */
     }
 
     .i-h1max {
@@ -217,6 +222,7 @@
       background-image: url(./images/Card_bg.png);
       background-repeat: no-repeat;
       background-size: contain;
+      background-position: center;
       box-shadow: 0 5px 10px -1px #aaa;
       position: relative;
     }
@@ -264,7 +270,7 @@
     <!-- MAIN -->
     <div class="i-main-wrapper">
       <!-- TITLE 1 -->
-      <div class="i-divtable">
+      <div class="i-divtable i-divtable-main">
         <div class="i-divtable-row i-center">
           <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
           <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
@@ -281,8 +287,10 @@
           <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
         </div>
       </div>
+      <div class="i-spacer-1em">&nbsp;</div>
+      <div class="i-spacer-1em">&nbsp;</div>
       <!-- TITLE 2 -->
-      <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+      <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced i-divtable-main">
         <div class="i-divtable-row">
           <div class="i-divtable-cell">
             <h2 class="i-h2 i-center">Value Identification</h2>
@@ -328,7 +336,7 @@
       <div class="i-spacer-1em">&nbsp;</div>
       <div class="i-spacer-1em">&nbsp;</div>
       <!-- NAVIGATION BOXES -->
-      <div class="i-divtable i-divtable-spaced">
+      <div class="i-divtable i-divtable-spaced i-divtable-main">
         <div class="i-divtable-row">
           <div class="i-divtable-cell">
             <h3 class="i-h3">O2 Value Map</h3>

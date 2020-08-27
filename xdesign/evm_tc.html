@@ -1,3 +1,4 @@
+<!-- https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fLanding_page_green_waves.png -->
 <style media="screen">
   /*** FONTS ***/
   @font-face {
@@ -67,7 +68,10 @@
 
   .i-divtable {
     display: table;
-    width: 100%;
+  }
+
+  .i-divtable-main {
+    margin: 0 10em;
   }
 
   .i-divtable-fixedlayout {
@@ -126,12 +130,12 @@
   .i-h5 {
     font-size: 1.4em;
     font-weight: 600;
-    font-family: roboto;
+    font-family: roboto, Arial;
     margin: 0;
   }
 
   .i-p {
-    font-family: roboto;
+    font-family: roboto, Arial;
     font-size: 1.5em;
     margin: 0;
   }
@@ -156,12 +160,16 @@
     width: 10em;
   }
 
+  .i-width-100 {
+    width: 100%;
+  }
+
   /*** BODY ****/
   .i-html,
   .i-body {
     margin: 0px;
     height: 100%;
-    font-family: opensans;
+    font-family: opensans, Arial;
     color: #222;
   }
 
@@ -194,30 +202,32 @@
     margin: auto;
   }
 
-  .i-navbar-link {
+  .i-navbar-link, .i-navbar-link:visited, .i-navbar-link:link, .i-navbar-link:active {
     display: block;
     float: left;
     height: 100%;
     text-align: center;
     padding: 0 2em;
-    text-decoration: none;
-    color: #fff;
+    text-decoration: none !important;
+    color: #fff !important;
     font-size: 1.3em;
     font-weight: 400;
+    font-family: opensans, Arial;
   }
 
   .i-navbar-link:hover {
-    text-decoration: underline;
-    text-decoration-color: #666;
+    text-decoration: underline !important;
+    text-decoration-color: #666 !important;
   }
 
   /*** MAIN ***/
   .i-main-wrapper {
-    background-image: url(./images/Second_page_green_waves.png);
-    background-size: contain;
+    background-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fSecond_page_green_waves.png);
+    background-position: top center;
+    background-size: auto;
     background-repeat: no-repeat;
-    min-height: 100%;
-    padding: 0 10em;
+    min-height: 630px;
+    /* padding: 0 10em; */
   }
 
   .i-h1max {
@@ -228,76 +238,77 @@
 
   .i-transition-box {
     width: 16em;
-    height: 22em;
+    /* height: 22em; */
+    /* position: relative; */
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: contain;
     box-shadow: 0 5px 10px -1px #aaa;
-    position: relative;
     transition: 0.4s;
   }
 
   .i-tbox-t1 {
-    height: 28em;
+    /* height: 28em; */
   }
 
   .i-bg-content {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     min-width: 13em;
     min-width: -webkit-fill-available;
     min-width: -moz-available;
     min-height: 18.8em;
     min-height: -webkit-fill-available;
-    min-height: -moz-available;
+    min-height: -moz-available; */
     padding: 0.5em;
     font-weight: 700;
     margin: 1em;
-    border: 2px solid #BCBCBC;
-    border-radius: 3px;
+    /* border: 2px solid #BCBCBC; */
+    /* border-radius: 3px; */
   }
 
   .i-bgc-t1 {
-    min-height: 24.8em;
+    /* min-height: 24.8em;
     min-height: -webkit-fill-available;
-    min-height: -moz-available;
+    min-height: -moz-available; */
   }
 
   .i-fg-content {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     min-width: 16.3em;
     min-width: -webkit-fill-available;
     min-width: -moz-available;
     min-height: 22em;
     min-height: -webkit-fill-available;
-    min-height: -moz-available;
+    min-height: -moz-available; */
     font-weight: 700;
     border-radius: 2px;
     color: #fff;
     background-color: #002E5C;
     opacity: 0;
     transition: 0.4s;
+    display: none;
   }
 
   .i-fgc-t1 {
-    min-height: 28em;
+    /* min-height: 28em;
     min-height: -webkit-fill-available;
     min-height: -moz-available;
     min-width: 22.6em;
     min-width: -webkit-fill-available;
-    min-width: -moz-available;
+    min-width: -moz-available; */
   }
 
   .i-fg-content-hover {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     min-width: 13em;
     min-width: -webkit-fill-available;
     min-width: -moz-available;
     min-height: 19.2em;
     min-height: -webkit-fill-available;
-    min-height: -moz-available;
+    min-height: -moz-available; */
     padding: 0.3em;
     margin: 1em;
     border: 2px solid #BCBCBC;
@@ -305,9 +316,9 @@
   }
 
   .i-fgch-t1 {
-    min-height: 25.2em;
+    /* min-height: 25.2em;
     min-height: -webkit-fill-available;
-    min-height: -moz-available;
+    min-height: -moz-available; */
   }
 
   .i-fg-content:hover {
@@ -319,8 +330,9 @@
   }
 
   .i-switchcontent-cell {
-    width: 75%;
-    position: relative;
+    /* width: 75%;
+    position: relative; */
+    vertical-align: top;
   }
 
   .i-switchbox {
@@ -348,8 +360,8 @@
     opacity: 0;
     display: none;
     transition: 0.4s;
-    position: absolute;
-    top: 0;
+    /* position: absolute;
+    top: 0; */
   }
 
   .i-blackbox {
@@ -360,12 +372,21 @@
     color: #fff;
   }
 
-  .i-ul-t0 {
+  .i-ul {
     font-weight: 400;
+    border-left: 2px dashed #b2b2b2;
+  }
+
+  .i-li {
+    padding: 0.3em 0em;
   }
 
   .i-li-t0 {
-    padding: 0.3em 0em;
+    list-style-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fSecond_page_green_bullet.png);
+  }
+
+  .i-li-t1 {
+    list-style-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fSecond_page_green_bullet_arrow.png);
   }
 
   .i-fg-content-p {
@@ -386,13 +407,14 @@
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
+    margin: 0 2em 2em 2em;
   }
 </style>
 
 <div class="i-body">
   <!-- NAVBAR -->
   <div class="i-navbar">
-    <img id="i-navbar-logo" src="./images/deloitte_w.png" alt="Deloitte.">
+    <img id="i-navbar-logo" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png" alt="Deloitte.">
     <div class="i-navbar-itemlist">
       <a href="./index.html" class="i-navbar-link">Home</a>
       <a href="#" class="i-navbar-link">About</a>
@@ -404,7 +426,7 @@
   <!-- MAIN -->
   <div class="i-main-wrapper">
     <!-- TITLE 1 -->
-    <div class="i-divtable">
+    <div class="i-divtable i-divtable-main">
       <div class="i-divtable-row i-center">
         <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
         <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
@@ -436,7 +458,7 @@
                       Enterprise Value Map
                     </div>
                     <div class="i-divtable-cell i-valign-middle">
-                      <img src="./images/Second_page_arrow.png" alt="">
+                      <img src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fSecond_page_arrow.png" alt="">
                     </div>
                   </div>
                 </div>
@@ -453,7 +475,7 @@
                       Value Journey Map
                     </div>
                     <div class="i-divtable-cell i-valign-middle">
-                      <img src="./images/Second_page_arrow.png" alt="">
+                      <img src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fSecond_page_arrow.png" alt="">
                     </div>
                   </div>
                 </div>
@@ -461,12 +483,12 @@
             </div>
           </div>
         </div>
-        <!-- CONTENT 0 -->
         <div class="i-divtable-cell i-switchcontent-cell">
+          <!-- CONTENT 0 -->
           <div class="i-content-wrapper" id="i-content-wrapper-0">
             <div class="i-divtable">
               <div class="i-divtable-row">
-                <div class="i-divtable i-divtable-fixedlayout">
+                <div class="i-divtable i-divtable-fixedlayout i-width-100">
                   <div class="i-divtable-row">
                     <div class="i-divtable-cell">&nbsp;</div>
                     <div class="i-divtable-cell i-center">
@@ -486,16 +508,16 @@
               </div>
               <div class="i-divtable-row">
                 <div class="i-divtable-cell">
-                  <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+                  <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced i-width-100">
                     <div class="i-divtable-row">
                       <div class="i-divtable-cell i-transition-box">
                         <!-- BG -->
                         <div class="i-bg-content">
                           <h4 class="i-h4">Operating Margin</h4>
-                          <ul class="i-ul-t0">
-                            <li class="i-li-t0">Selling, General & Administrative (SG&A)</li>
-                            <li class="i-li-t0">Taxes</li>
-                            <li class="i-li-t0">COGS</li>
+                          <ul class="i-ul">
+                            <li class="i-li i-li-t0">Selling, General & Administrative (SG&A)</li>
+                            <li class="i-li i-li-t0">Taxes</li>
+                            <li class="i-li i-li-t0">COGS</li>
                           </ul>
                         </div>
                         <!-- FG -->
@@ -509,9 +531,9 @@
                         <!-- BG -->
                         <div class="i-bg-content">
                           <h4 class="i-h4">Revenue Growth</h4>
-                          <ul class="i-ul-t0">
-                            <li class="i-li-t0">Price Realization</li>
-                            <li class="i-li-t0">Margin</li>
+                          <ul class="i-ul">
+                            <li class="i-li i-li-t0">Price Realization</li>
+                            <li class="i-li i-li-t0">Margin</li>
                           </ul>
                         </div>
                         <!-- FG -->
@@ -525,9 +547,9 @@
                         <!-- BG -->
                         <div class="i-bg-content">
                           <h4 class="i-h4">Expectations</h4>
-                          <ul class="i-ul-t0">
-                            <li class="i-li-t0">External Factors</li>
-                            <li class="i-li-t0">Company Strength</li>
+                          <ul class="i-ul">
+                            <li class="i-li i-li-t0">External Factors</li>
+                            <li class="i-li i-li-t0">Company Strength</li>
                           </ul>
                         </div>
                         <!-- FG -->
@@ -541,11 +563,11 @@
                         <!-- BG -->
                         <div class="i-bg-content">
                           <h4 class="i-h4">Asset Efficiency</h4>
-                          <ul class="i-ul-t0">
-                            <li class="i-li-t0">Inventory</li>
-                            <li class="i-li-t0">Property, Plan & Equipment (PP&E)</li>
-                            <li class="i-li-t0">Receivables</li>
-                            <li class="i-li-t0">Payables</li>
+                          <ul class="i-ul">
+                            <li class="i-li i-li-t0">Inventory</li>
+                            <li class="i-li i-li-t0">Property, Plan & Equipment (PP&E)</li>
+                            <li class="i-li i-li-t0">Receivables</li>
+                            <li class="i-li i-li-t0">Payables</li>
                           </ul>
                         </div>
                         <!-- FG -->
@@ -563,7 +585,7 @@
           </div>
           <!-- CONTENT 1 -->
           <div class="i-content-wrapper" id="i-content-wrapper-1">
-            <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+            <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced i-width-100">
               <div class="i-divtable-row">
                 <div class="i-divtable-cell i-content-header-t0">
                   Value Identification
@@ -580,12 +602,12 @@
                   <!-- BG -->
                   <div class="i-bg-content i-bgc-t1">
                     <h5 class="i-h5">Define a strategic vision and identify opportunities and associated capabilities by priority where value can be identified.</h5>
-                    <ul class="i-ul-t0">
-                      <li class="i-li-t0">Enterprise Value Methodology (EVM)</li>
-                      <li class="i-li-t0">Assessment Model</li>
-                      <li class="i-li-t0">Industry Benchmarking</li>
-                      <li class="i-li-t0">Cost & Benefit Analysis</li>
-                      <li class="i-li-t0">Value Proposition</li>
+                    <ul class="i-ul">
+                      <li class="i-li i-li-t1">Enterprise Value Methodology (EVM)</li>
+                      <li class="i-li i-li-t1">Assessment Model</li>
+                      <li class="i-li i-li-t1">Industry Benchmarking</li>
+                      <li class="i-li i-li-t1">Cost & Benefit Analysis</li>
+                      <li class="i-li i-li-t1">Value Proposition</li>
                     </ul>
                   </div>
                   <!-- FG -->
@@ -599,12 +621,12 @@
                   <!-- BG -->
                   <div class="i-bg-content i-bgc-t1">
                     <h5 class="i-h5">For the selected capabilities, complete the work and track value realised by comparing against benchmarks.</h5>
-                    <ul class="i-ul-t0">
-                      <li class="i-li-t0">Oracle Cloud Capabilities</li>
-                      <li class="i-li-t0">Deloitte Market Enablers</li>
-                      <li class="i-li-t0">Digital Solutions & Technologies</li>
-                      <li class="i-li-t0">Leading & Industry Practices</li>
-                      <li class="i-li-t0">Process Maps</li>
+                    <ul class="i-ul">
+                      <li class="i-li i-li-t1">Oracle Cloud Capabilities</li>
+                      <li class="i-li i-li-t1">Deloitte Market Enablers</li>
+                      <li class="i-li i-li-t1">Digital Solutions & Technologies</li>
+                      <li class="i-li i-li-t1">Leading & Industry Practices</li>
+                      <li class="i-li i-li-t1">Process Maps</li>
                     </ul>
                   </div>
                   <!-- FG -->
@@ -618,12 +640,12 @@
                   <!-- BG -->
                   <div class="i-bg-content i-bgc-t1">
                     <h5 class="i-h5">Drive continuous insights into new opportunities.</h5>
-                    <ul class="i-ul-t0">
-                      <li class="i-li-t0">Digital Analytics</li>
-                      <li class="i-li-t0">Value Tracking Pilot</li>
-                      <li class="i-li-t0">Business Case Scorecard</li>
-                      <li class="i-li-t0">Digital Foundry</li>
-                      <li class="i-li-t0">Business Case Tool (2.0)</li>
+                    <ul class="i-ul">
+                      <li class="i-li i-li-t1">Digital Analytics</li>
+                      <li class="i-li i-li-t1">Value Tracking Pilot</li>
+                      <li class="i-li i-li-t1">Business Case Scorecard</li>
+                      <li class="i-li i-li-t1">Digital Foundry</li>
+                      <li class="i-li i-li-t1">Business Case Tool (2.0)</li>
                     </ul>
                   </div>
                   <!-- FG -->
@@ -639,7 +661,7 @@
         </div>
       </div>
     </div>
-    <div class="i-blue-btn i-fl-right">
+    <div class="i-blue-btn i-fl-right" onclick="window.location='./valuemap.html'">
       O2 Value Map
     </div>
   </div>

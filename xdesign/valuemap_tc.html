@@ -1,0 +1,752 @@
+<!-- https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fLanding_page_green_waves.png -->
+<style media="screen">
+  /*** FONTS ***/
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-Light.ttf);
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-Regular.ttf);
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-SemiBold.ttf);
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-Bold.ttf);
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: opensans;
+    src: url(./fonts/open_sans/OpenSans-ExtraBold.ttf);
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Light.ttf);
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Regular.ttf);
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Medium.ttf);
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Bold.ttf);
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/roboto/Roboto-Black.ttf);
+    font-weight: 800;
+  }
+
+  /*** FRAMEWORK ***/
+  .i-spacer-1em {
+    height: 1em;
+  }
+
+  .i-divtable {
+    display: table;
+    width: 100%;
+  }
+
+  .i-divtable-fixedlayout {
+    table-layout: fixed;
+  }
+
+  .i-divtable-spaced {
+    border-spacing: 1em;
+  }
+
+  .i-divtable-row {
+    display: table-row;
+  }
+
+  .i-divtable-cell {
+    display: table-cell;
+  }
+
+  .i-fl-left {
+    float: left;
+  }
+
+  .i-fl-right {
+    float: right;
+  }
+
+  .i-white {
+    color: #fff;
+  }
+
+  .i-center {
+    text-align: center;
+  }
+
+  .i-h1 {
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  .i-h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  .i-h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+
+  .i-h4 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .i-h5 {
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: roboto, Arial;
+    margin: 0;
+  }
+
+  .i-p {
+    font-family: roboto, Arial;
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .i-valign-top {
+    vertical-align: top;
+  }
+
+  .i-valign-bottom {
+    vertical-align: bottom;
+  }
+
+  .i-valign-middle {
+    vertical-align: middle;
+  }
+
+  .i-columnspacer-2em {
+    width: 2em;
+  }
+
+  .i-columnspacer-10em {
+    width: 10em;
+  }
+
+  .i-table {
+    width: 100%;
+  }
+
+  .i-tr {
+    border-bottom: 1px solid #B2B2B2;
+  }
+
+  .i-th {
+    padding: 1em;
+    font-weight: 700;
+    font-family: opensans, Arial;
+  }
+
+  .i-td {
+    padding: 0.7em 1em;
+    font-family: roboto, Arial;
+  }
+
+  .i-td+.i-td {
+    border-left: 3px solid #B2B2B2;
+  }
+
+  .i-hr {
+    border: 1px solid #d2d2d2;
+    width: 100%;
+  }
+
+  /*** BODY ****/
+  .i-html,
+  .i-body {
+    margin: 0px;
+    height: 100%;
+    font-family: opensans, Arial;
+    color: #222;
+  }
+
+  /*** NAVBAR ****/
+  .i-navbar {
+    height: 5em;
+    line-height: 5em;
+    vertical-align: middle;
+    background-color: #000;
+    width: 100%;
+    color: #ddd;
+    position: relative;
+  }
+
+  #i-navbar-logo {
+    height: 60%;
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-left: 0.5em;
+  }
+
+  .i-navbar-itemlist {
+    position: absolute;
+    right: 4em;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .i-navbar-link, .i-navbar-link:visited, .i-navbar-link:link, .i-navbar-link:active {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    padding: 0 2em;
+    text-decoration: none !important;
+    color: #fff !important;
+    font-size: 1.3em;
+    font-weight: 400;
+    font-family: opensans, Arial;
+  }
+
+  .i-navbar-link:hover {
+    text-decoration: underline !important;
+    text-decoration-color: #666 !important;
+  }
+
+  /*** MAIN ***/
+  .i-main-wrapper {
+    background-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fSecond_page_green_waves.png);
+    background-position: top center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    min-height: 630px;
+    /* padding: 0 10em; */
+  }
+
+  .i-h1max {
+    font-size: 9em;
+    line-height: 0.5em;
+    margin: 0;
+  }
+
+  .i-transition-box {
+    width: 16em;
+    height: 22em;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0 5px 10px -1px #aaa;
+    position: relative;
+    transition: 0.4s;
+  }
+
+  .i-tbox-t1 {
+    height: 28em;
+  }
+
+  .i-bg-content {
+    position: absolute;
+    top: 0;
+    min-width: 13em;
+    min-width: -webkit-fill-available;
+    min-width: -moz-available;
+    min-height: 18.8em;
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    padding: 0.5em;
+    font-weight: 700;
+    margin: 1em;
+    border: 2px solid #BCBCBC;
+    border-radius: 3px;
+  }
+
+  .i-bgc-t1 {
+    min-height: 24.8em;
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+  }
+
+  .i-fg-content {
+    position: absolute;
+    top: 0;
+    min-width: 16.3em;
+    min-width: -webkit-fill-available;
+    min-width: -moz-available;
+    min-height: 22em;
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    font-weight: 700;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #002E5C;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  .i-fgc-t1 {
+    min-height: 28em;
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    min-width: 22.6em;
+    min-width: -webkit-fill-available;
+    min-width: -moz-available;
+  }
+
+  .i-fg-content-hover {
+    position: absolute;
+    top: 0;
+    min-width: 13em;
+    min-width: -webkit-fill-available;
+    min-width: -moz-available;
+    min-height: 19.2em;
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    padding: 0.3em;
+    margin: 1em;
+    border: 2px solid #BCBCBC;
+    border-radius: 3px;
+  }
+
+  .i-fgch-t1 {
+    min-height: 25.2em;
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+  }
+
+  .i-fg-content:hover {
+    opacity: 1;
+  }
+
+  .i-switchbox-cell {
+    width: 25%;
+  }
+
+  .i-switchcontent-cell {
+    width: 75%;
+    position: relative;
+  }
+
+  .i-switchbox {
+    height: 7em;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: 0.4s;
+    background-color: #002E5C;
+    vertical-align: middle;
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+  .i-switchbox.i-switchbox-active {
+    border: 2px solid #FFC914;
+    border-right: 15px solid #FFC914;
+  }
+
+  .i-switchcontent {
+    height: 16em;
+    width: 80%;
+  }
+
+  .i-content-wrapper {
+    opacity: 0;
+    display: none;
+    transition: 0.4s;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .i-blackbox {
+    background-color: #2F2F2F;
+    border-radius: 4px;
+    padding: 0.6em;
+    font-size: 1.4em;
+    color: #fff;
+  }
+
+  .i-ul-t0 {
+    font-weight: 400;
+  }
+
+  .i-li-t0 {
+    padding: 0.3em 0em;
+  }
+
+  .i-fg-content-p {
+    font-size: 1.3em;
+    font-weight: 400;
+    padding: 0.5em;
+  }
+
+  .i-content-header-t0 {
+    font-weight: 700;
+    border-bottom: 2px dashed #000;
+  }
+
+  .i-blue-btn {
+    padding: 1em;
+    font-size: 1.2em;
+    background-color: #002E5C;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .i-breadcrumbs {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 2px solid #84CDA8;
+    border-radius: 3px;
+    opacity: 1;
+    font-family: roboto, Arial;
+    padding: 1em;
+  }
+
+  .i-breadcrumbs-header {
+    font-weight: 700;
+  }
+
+  .i-breadcrumbs-value {
+    font-weight: 400;
+  }
+
+  .i-breadcrumbs-separator {
+    font-weight: 800;
+    height: 1em;
+    width: 1em;
+    background-size: contain;
+    background-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fchevron_right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgba(0, 0, 0, 0);
+  }
+
+  .i-section-selector {
+    background: #4477AA 0% 0% no-repeat padding-box !important;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 51px !important;
+    opacity: 1;
+    padding: 1.3em 3em !important;
+    font-size: 1em !important;
+    border: 0 !important;
+    outline: none;
+    cursor: pointer !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    transition: 0.4s;
+  }
+
+  .i-section-selector-active {
+    background: #002E5C 0% 0% no-repeat padding-box !important;
+  }
+
+  .i-fullwidth-card {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000039;
+    border-radius: 3px;
+    opacity: 1;
+    padding: 2em;
+    margin-bottom: 2em;
+  }
+
+  .i-fullwidth-card-header {
+    font-size: 1.7em;
+    font-weight: 700;
+    font-family: opensans, Arial;
+  }
+
+  .i-fch-img {
+    height: 50px;
+    float: left;
+  }
+
+  .i-fch-txt {
+    margin: 0;
+    margin-left: 100px;
+    line-height: 50px;
+  }
+
+  .i-fullwidth-card-content {
+    margin-top: 2em;
+    font-family: roboto, Arial;
+    font-weight: 400;
+  }
+</style>
+
+<div class="i-body">
+  <!-- NAVBAR -->
+  <div class="i-navbar">
+    <img id="i-navbar-logo" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png" alt="Deloitte.">
+    <div class="i-navbar-itemlist">
+      <a href="./index.html" class="i-navbar-link">Home</a>
+      <a href="#" class="i-navbar-link">About</a>
+      <a href="#" class="i-navbar-link">Report a Bug</a>
+      <a href="#" class="i-navbar-link">FAQ</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="i-main-wrapper">
+    <!-- BREADCRUMBS -->
+    <div class="i-divtable i-divtable-spaced">
+      <div class="i-divtable-row">
+        <div class="i-divtable-cell i-center">
+          <div class="i-breadcrumbs">
+            <span class="i-breadcrumbs-header" id="i-bc-h0">
+              Value Driver:
+            </span>
+            <span class="i-breadcrumbs-value" id="i-bc-v0">
+              Expectations
+            </span>
+            <span class="i-breadcrumbs-separator">>></span>
+            <span class="i-breadcrumbs-header" id="i-bc-h1">
+              Sub Driver:
+            </span>
+            <span class="i-breadcrumbs-value" id="i-bc-v1">
+              Receivables & Payables
+            </span>
+            <span class="i-breadcrumbs-separator">>></span>
+            <span class="i-breadcrumbs-header" id="i-bc-h2">
+              Lever:
+            </span>
+            <span class="i-breadcrumbs-value" id="i-bc-v2">
+              Improve Shared Service Efficiency
+            </span>
+            <span class="i-breadcrumbs-separator">>></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="i-spacer-1em">&nbsp;</div>
+
+    <!-- SECTIONS -->
+    <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+      <div class="i-divtable-row i-center">
+        <div class="i-divtable-cell">
+          <button class="i-section-selector" id="i-section-selector-1">
+            Value Identification
+          </button>
+        </div>
+        <div class="i-divtable-cell">
+          <button class="i-section-selector" id="i-section-selector-2">
+            Value Enablement
+          </button>
+        </div>
+        <div class="i-divtable-cell">
+          <button class="i-section-selector" id="i-section-selector-3">
+            Value Innovation
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="i-spacer-1em">&nbsp;</div>
+    <div class="i-spacer-1em">&nbsp;</div>
+
+    <!-- SECTION CONTENT -->
+    <div class="i-divtable">
+      <div class="i-divtable-row">
+        <div class="i-divtable-cell i-switchcontent-cell">
+          <!-- CONTENT DEFAULT -->
+          <div class="i-content-wrapper i-center" id="i-content-wrapper-0">
+            <h3 class="i-h3">Select values from the menu to start exploring!</h3>
+          </div>
+          <!-- CONTENT 1 -->
+          <div class="i-content-wrapper" id="i-content-wrapper-1">
+            <div class="i-divtable i-divtable-spaced">
+              <div class="i-divtable-row">
+                <div class="i-divtable-cell">
+                  <!-- FULL CARD -->
+                  <div class="i-fullwidth-card">
+                    <div class="i-fullwidth-card-header">
+                      <img class="i-fch-img" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fEVM_Icon.png" alt="">
+                      <h5 class="i-fch-txt">Value Opportunity Sub Levers</h5>
+                    </div>
+                    <div class="i-fullwidth-card-content">
+                      1. Enable Continuous close at corporate level <br>
+                      2. Minimise the manual accounting entries
+                    </div>
+                  </div>
+                  <!-- FULL CARD -->
+                  <div class="i-fullwidth-card">
+                    <div class="i-fullwidth-card-header">
+                      <img class="i-fch-img" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fEVM_Icon.png" alt="">
+                      <h5 class="i-fch-txt">Quantifying your Potential Value Opportunities</h5>
+                    </div>
+                    <div class="i-fullwidth-card-content">
+                      <table class="i-table">
+                        <tr class="i-tr">
+                          <th class="i-th">Category</th>
+                          <th class="i-th">KPI</th>
+                          <th class="i-th">Industry Benchmark</th>
+                          <th class="i-th">Potential Opportunity</th>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td">Close Cycle Times</td>
+                          <td class="i-td">Time to Close</td>
+                          <td class="i-td">10 days</td>
+                          <td class="i-td">10-20% improvement during close cycle time</td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td" colspan="4">
+                            <hr class="i-hr">
+                          </td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td">Close Cycle Times</td>
+                          <td class="i-td">Time to Close</td>
+                          <td class="i-td">10 days</td>
+                          <td class="i-td">10-20% improvement during close cycle time</td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td" colspan="4">
+                            <hr class="i-hr">
+                          </td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td">Close Cycle Times</td>
+                          <td class="i-td">Time to Close</td>
+                          <td class="i-td">10 days</td>
+                          <td class="i-td">10-20% improvement during close cycle time</td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td" colspan="4">
+                            <hr class="i-hr">
+                          </td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td">Close Cycle Times</td>
+                          <td class="i-td">Time to Close</td>
+                          <td class="i-td">10 days</td>
+                          <td class="i-td">10-20% improvement during close cycle time</td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td" colspan="4">
+                            <hr class="i-hr">
+                          </td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td">Close Cycle Times</td>
+                          <td class="i-td">Time to Close</td>
+                          <td class="i-td">10 days</td>
+                          <td class="i-td">10-20% improvement during close cycle time</td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td" colspan="4">
+                            <hr class="i-hr">
+                          </td>
+                        </tr>
+                        <tr class="i-tr">
+                          <td class="i-td">Close Cycle Times</td>
+                          <td class="i-td">Time to Close</td>
+                          <td class="i-td">10 days</td>
+                          <td class="i-td">10-20% improvement during close cycle time</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- FULL CARD -->
+                  <div class="i-fullwidth-card">
+                    <div class="i-fullwidth-card-header">
+                      <img class="i-fch-img" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fEVM_Icon.png" alt="">
+                      <h5 class="i-fch-txt">Other Value Opportunities</h5>
+                    </div>
+                    <div class="i-fullwidth-card-content">
+                      Better accuracy of financial information and improved reporting
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CONTENT 2 -->
+          <div class="i-content-wrapper" id="i-content-wrapper-2">
+
+          </div>
+          <!-- CONTENT 3 -->
+          <div class="i-content-wrapper" id="i-content-wrapper-3">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  var sw_boxes = document.getElementsByClassName("i-section-selector");
+  document.getElementById("i-content-wrapper-0").style.display = "block";
+  document.getElementById("i-content-wrapper-0").style.opacity = 1;
+  for (var i = 0; i < sw_boxes.length; i++) {
+    sw_boxes[i].addEventListener("click", function() {
+      console.log("clicked");
+      if (!this.classList.contains("i-section-selector-active")) {
+        var active_index = this.id.split("i-section-selector-")[1];
+        var all_active = document.getElementsByClassName("i-section-selector-active");
+        var all_active_len = all_active.length;
+        if (all_active_len === 0) {
+          this.classList.add("i-section-selector-active");
+
+          var active_content = document.getElementById("i-content-wrapper-" + active_index);
+          active_content.style.display = "block";
+          document.getElementById("i-content-wrapper-0").style.opacity = 0;
+          setTimeout(function() {
+            document.getElementById("i-content-wrapper-0").style.display = "none";
+            active_content.style.opacity = 1;
+          }, 1);
+        } else {
+          for (var j = 0; j < all_active_len; j++) {
+            var inactive_index = all_active[j].id.split("i-section-selector-")[1];
+            var all_active_content = document.getElementById("i-content-wrapper-" + inactive_index);
+            all_active_content.style.opacity = 0;
+            setTimeout(function() {
+              all_active_content.style.display = "none";
+            }, 1);
+
+            all_active[j].classList.remove("i-section-selector-active");
+
+            if (j === all_active_len - 1) {
+              this.classList.add("i-section-selector-active");
+
+              var active_content = document.getElementById("i-content-wrapper-" + active_index);
+              active_content.style.display = "block";
+              setTimeout(function() {
+                active_content.style.opacity = 1;
+              }, 1);
+            }
+          }
+        }
+      }
+    });
+  }
+</script>

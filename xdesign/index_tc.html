@@ -1,3 +1,4 @@
+<!-- https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fLanding_page_green_waves.png -->
 <style media="screen">
   /*** FONTS ***/
   @font-face {
@@ -67,7 +68,10 @@
 
   .i-divtable {
     display: table;
-    width: 100%;
+  }
+
+  .i-divtable-main {
+    margin: 0 10em;
   }
 
   .i-divtable-fixedlayout {
@@ -110,7 +114,7 @@
   }
 
   .i-p {
-    font-family: roboto;
+    font-family: roboto, Arial;
     font-size: 1.5em;
     margin: 0;
   }
@@ -136,7 +140,7 @@
   .i-body {
     margin: 0px;
     height: 100%;
-    font-family: opensans;
+    font-family: opensans, Arial;
     color: #222;
   }
 
@@ -169,30 +173,32 @@
     margin: auto;
   }
 
-  .i-navbar-link {
+  .i-navbar-link, .i-navbar-link:visited, .i-navbar-link:link, .i-navbar-link:active {
     display: block;
     float: left;
     height: 100%;
     text-align: center;
     padding: 0 2em;
-    text-decoration: none;
-    color: #fff;
+    text-decoration: none !important;
+    color: #fff !important;
     font-size: 1.3em;
     font-weight: 400;
+    font-family: opensans, Arial;
   }
 
   .i-navbar-link:hover {
-    text-decoration: underline;
-    text-decoration-color: #666;
+    text-decoration: underline !important;
+    text-decoration-color: #666 !important;
   }
 
   /*** MAIN ***/
   .i-main-wrapper {
-    background-image: url(./images/Landing_page_green_waves.png);
-    background-size: contain;
+    background-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fLanding_page_green_waves.png);
+    background-position: top center;
+    background-size: auto;
     background-repeat: no-repeat;
-    min-height: 100%;
-    padding: 0 10em;
+    min-height: 630px;
+    /* padding: 0 10em; */
   }
 
   .i-h1max {
@@ -205,9 +211,10 @@
     width: 16em;
     height: 16em;
     background-color: #fff;
-    background-image: url(./images/Card_bg.png);
+    background-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fCard_bg.png);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     box-shadow: 0 5px 10px -1px #aaa;
     position: relative;
   }
@@ -229,7 +236,7 @@
     background-color: #002E5C;
     cursor: pointer;
     border: 2px solid #fff;
-    background-image: url(./images/Card_goto_hover_icon.png);
+    background-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fCard_goto_hover_icon.png);
     background-repeat: no-repeat;
     background-position: top right;
     background-origin: content-box;
@@ -243,7 +250,7 @@
 <div class="i-body">
   <!-- NAVBAR -->
   <div class="i-navbar">
-    <img id="i-navbar-logo" src="./images/deloitte_w.png" alt="Deloitte.">
+    <img id="i-navbar-logo" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png" alt="Deloitte.">
     <div class="i-navbar-itemlist">
       <a href="#" class="i-navbar-link">Home</a>
       <a href="#" class="i-navbar-link">About</a>
@@ -255,7 +262,7 @@
   <!-- MAIN -->
   <div class="i-main-wrapper">
     <!-- TITLE 1 -->
-    <div class="i-divtable">
+    <div class="i-divtable i-divtable-main">
       <div class="i-divtable-row i-center">
         <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
         <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
@@ -272,8 +279,10 @@
         <div class="i-divtable-cell i-columnspacer-2em">&nbsp;</div>
       </div>
     </div>
+    <div class="i-spacer-1em">&nbsp;</div>
+    <div class="i-spacer-1em">&nbsp;</div>
     <!-- TITLE 2 -->
-    <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+    <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced i-divtable-main">
       <div class="i-divtable-row">
         <div class="i-divtable-cell">
           <h2 class="i-h2 i-center">Value Identification</h2>
@@ -319,7 +328,7 @@
     <div class="i-spacer-1em">&nbsp;</div>
     <div class="i-spacer-1em">&nbsp;</div>
     <!-- NAVIGATION BOXES -->
-    <div class="i-divtable i-divtable-spaced">
+    <div class="i-divtable i-divtable-spaced i-divtable-main">
       <div class="i-divtable-row">
         <div class="i-divtable-cell">
           <h3 class="i-h3">O2 Value Map</h3>
@@ -331,7 +340,7 @@
           <div class="i-divtable i-bg-content">
             <div class="i-divtable-row">
               <div class="i-divtable-cell i-valign-top">
-                <img src="./images/EVM_Icon.png" alt="">
+                <img src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fEVM_Icon.png" alt="">
               </div>
             </div>
             <div class="i-divtable-row">
@@ -354,7 +363,7 @@
           <div class="i-divtable i-bg-content">
             <div class="i-divtable-row">
               <div class="i-divtable-cell i-valign-top">
-                <img src="./images/KPI_Icon.png" alt="">
+                <img src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fKPI_Icon.png" alt="">
               </div>
             </div>
             <div class="i-divtable-row">
@@ -377,7 +386,7 @@
           <div class="i-divtable i-bg-content">
             <div class="i-divtable-row">
               <div class="i-divtable-cell i-valign-top">
-                <img src="./images/next_gen_Icon.png" alt="">
+                <img src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fnext_gen_Icon.png" alt="">
               </div>
             </div>
             <div class="i-divtable-row">
@@ -400,7 +409,7 @@
           <div class="i-divtable i-bg-content">
             <div class="i-divtable-row">
               <div class="i-divtable-cell i-valign-top">
-                <img src="./images/Deloitte_Sol__Icon.png" alt="">
+                <img src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fDeloitte_Sol__Icon.png" alt="">
               </div>
             </div>
             <div class="i-divtable-row">

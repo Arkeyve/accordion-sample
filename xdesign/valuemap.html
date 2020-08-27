@@ -135,12 +135,12 @@
     .i-h5 {
       font-size: 1.4em;
       font-weight: 600;
-      font-family: roboto;
+      font-family: roboto, Arial;
       margin: 0;
     }
 
     .i-p {
-      font-family: roboto;
+      font-family: roboto, Arial;
       font-size: 1.5em;
       margin: 0;
     }
@@ -176,12 +176,12 @@
     .i-th {
       padding: 1em;
       font-weight: 700;
-      font-family: opensans;
+      font-family: opensans, Arial;
     }
 
     .i-td {
       padding: 0.7em 1em;
-      font-family: roboto;
+      font-family: roboto, Arial;
     }
 
     .i-td+.i-td {
@@ -198,7 +198,7 @@
     .i-body {
       margin: 0px;
       height: 100%;
-      font-family: opensans;
+      font-family: opensans, Arial;
       color: #222;
     }
 
@@ -231,30 +231,32 @@
       margin: auto;
     }
 
-    .i-navbar-link {
+    .i-navbar-link, .i-navbar-link:visited, .i-navbar-link:link, .i-navbar-link:active {
       display: block;
       float: left;
       height: 100%;
       text-align: center;
       padding: 0 2em;
-      text-decoration: none;
-      color: #fff;
+      text-decoration: none !important;
+      color: #fff !important;
       font-size: 1.3em;
       font-weight: 400;
+      font-family: opensans, Arial;
     }
 
     .i-navbar-link:hover {
-      text-decoration: underline;
-      text-decoration-color: #666;
+      text-decoration: underline !important;
+      text-decoration-color: #666 !important;
     }
 
     /*** MAIN ***/
     .i-main-wrapper {
       background-image: url(./images/Second_page_green_waves.png);
-      background-size: contain;
+      background-position: top center;
+      background-size: auto;
       background-repeat: no-repeat;
-      min-height: 100%;
-      padding: 0 10em;
+      min-height: 630px;
+      /* padding: 0 10em; */
     }
 
     .i-h1max {
@@ -432,7 +434,7 @@
       border: 2px solid #84CDA8;
       border-radius: 3px;
       opacity: 1;
-      font-family: roboto;
+      font-family: roboto, Arial;
       padding: 1em;
     }
 
@@ -456,22 +458,22 @@
     }
 
     .i-section-selector {
-      background: #4477AA 0% 0% no-repeat padding-box;
+      background: #4477AA 0% 0% no-repeat padding-box !important;
       box-shadow: 0px 3px 6px #00000029;
-      border-radius: 51px;
+      border-radius: 51px !important;
       opacity: 1;
-      padding: 1.3em 3em;
-      font-size: 1em;
-      border: 0;
+      padding: 1.3em 3em !important;
+      font-size: 1em !important;
+      border: 0 !important;
       outline: none;
-      cursor: pointer;
-      color: #fff;
-      font-weight: 700;
+      cursor: pointer !important;
+      color: #fff !important;
+      font-weight: 700 !important;
       transition: 0.4s;
     }
 
     .i-section-selector-active {
-      background: #002E5C 0% 0% no-repeat padding-box;
+      background: #002E5C 0% 0% no-repeat padding-box !important;
     }
 
     .i-fullwidth-card {
@@ -486,7 +488,7 @@
     .i-fullwidth-card-header {
       font-size: 1.7em;
       font-weight: 700;
-      font-family: opensans;
+      font-family: opensans, Arial;
     }
 
     .i-fch-img {
@@ -502,7 +504,7 @@
 
     .i-fullwidth-card-content {
       margin-top: 2em;
-      font-family: roboto;
+      font-family: roboto, Arial;
       font-weight: 400;
     }
   </style>
