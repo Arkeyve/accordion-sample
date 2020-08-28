@@ -8,6 +8,15 @@
 
 <body class="i-body">
   <style media="screen">
+    /*** OVERRIDE ***/
+    .OACHeaderPageTitleBar {
+      background-color: #000;
+    }
+
+    .masterBrandingArea {
+      display: none;
+    }
+
     /*** FONTS ***/
     @font-face {
       font-family: opensans;
@@ -139,6 +148,13 @@
       margin: 0;
     }
 
+    .i-h6 {
+      font-size: 1.2em;
+      font-weight: 600;
+      font-family: roboto, Arial;
+      margin: 0;
+    }
+
     .i-p {
       font-family: roboto, Arial;
       font-size: 1.5em;
@@ -193,6 +209,10 @@
       width: 100%;
     }
 
+    .i-hide {
+      display: none;
+    }
+
     /*** BODY ****/
     .i-html,
     .i-body {
@@ -231,7 +251,10 @@
       margin: auto;
     }
 
-    .i-navbar-link, .i-navbar-link:visited, .i-navbar-link:link, .i-navbar-link:active {
+    .i-navbar-link,
+    .i-navbar-link:visited,
+    .i-navbar-link:link,
+    .i-navbar-link:active {
       display: block;
       float: left;
       height: 100%;
@@ -251,11 +274,12 @@
 
     /*** MAIN ***/
     .i-main-wrapper {
-      background-image: url(./images/Second_page_green_waves.png);
+      background-image: url(./images/Background.png);
       background-position: top center;
-      background-size: auto;
+      background-size: cover;
       background-repeat: no-repeat;
-      min-height: 630px;
+      min-height: 1080px;
+      font-size: 1.3em;
       /* padding: 0 10em; */
     }
 
@@ -400,12 +424,21 @@
       color: #fff;
     }
 
-    .i-ul-t0 {
+    .i-ul {
       font-weight: 400;
+      border-left: 2px dashed #b2b2b2;
+    }
+
+    .i-li {
+      padding: 0.3em 0em;
     }
 
     .i-li-t0 {
-      padding: 0.3em 0em;
+      list-style-image: url(./images/Second_page_green_bullet.png);
+    }
+
+    .i-li-t1 {
+      list-style-image: url(./images/Second_page_green_bullet_arrow.png);
     }
 
     .i-fg-content-p {
@@ -468,7 +501,7 @@
       outline: none;
       cursor: pointer !important;
       color: #fff !important;
-      font-weight: 700 !important;
+      font-weight: 400 !important;
       transition: 0.4s;
     }
 
@@ -502,16 +535,42 @@
       line-height: 50px;
     }
 
+    .i-fch-subtxt {
+      vertical-align: top;
+      font-size: 0.6em;
+      line-height: 1em;
+      font-weight: 400;
+    }
+
     .i-fullwidth-card-content {
       margin-top: 2em;
       font-family: roboto, Arial;
       font-weight: 400;
     }
+
+    .i-cellbox {
+      border: 2px solid #888;
+      border-radius: 10px;
+      opacity: 1;
+      padding: 1.5em;
+    }
+
+    .i-cellheaderimg {
+      height: 5em;
+      margin-bottom: 1em;
+    }
+
+    .i-celltxt {
+      margin: 1em 2em;
+      font-size: 1.1em;
+      text-align: left;
+      font-weight: 300;
+    }
   </style>
 
   <div class="i-body">
     <!-- NAVBAR -->
-    <div class="i-navbar">
+    <div class="i-navbar i-hide">
       <img id="i-navbar-logo" src="./images/deloitte_w.png" alt="Deloitte.">
       <div class="i-navbar-itemlist">
         <a href="./index.html" class="i-navbar-link">Home</a>
@@ -596,7 +655,7 @@
                     <!-- FULL CARD -->
                     <div class="i-fullwidth-card">
                       <div class="i-fullwidth-card-header">
-                        <img class="i-fch-img" src="./images/EVM_Icon.png" alt="">
+                        <img class="i-fch-img" src="./images/value_opp.png" alt="">
                         <h5 class="i-fch-txt">Value Opportunity Sub Levers</h5>
                       </div>
                       <div class="i-fullwidth-card-content">
@@ -607,7 +666,7 @@
                     <!-- FULL CARD -->
                     <div class="i-fullwidth-card">
                       <div class="i-fullwidth-card-header">
-                        <img class="i-fch-img" src="./images/EVM_Icon.png" alt="">
+                        <img class="i-fch-img" src="./images/quant.png" alt="">
                         <h5 class="i-fch-txt">Quantifying your Potential Value Opportunities</h5>
                       </div>
                       <div class="i-fullwidth-card-content">
@@ -685,7 +744,7 @@
                     <!-- FULL CARD -->
                     <div class="i-fullwidth-card">
                       <div class="i-fullwidth-card-header">
-                        <img class="i-fch-img" src="./images/EVM_Icon.png" alt="">
+                        <img class="i-fch-img" src="./images/other_value.png" alt="">
                         <h5 class="i-fch-txt">Other Value Opportunities</h5>
                       </div>
                       <div class="i-fullwidth-card-content">
@@ -698,7 +757,109 @@
             </div>
             <!-- CONTENT 2 -->
             <div class="i-content-wrapper" id="i-content-wrapper-2">
-
+              <div class="i-divtable i-divtable-spaced">
+                <div class="i-divtable-row">
+                  <div class="i-divtable-cell">
+                    <!-- FULL CARD -->
+                    <div class="i-fullwidth-card">
+                      <div class="i-fullwidth-card-header">
+                        <img class="i-fch-img" src="./images/value_opp.png" alt="">
+                        <h5 class="i-fch-txt">Our Enablers</h5>
+                        <h5 class="i-fch-txt i-fch-subtxt">Promoting businesses with true partnership.</h5>
+                      </div>
+                      <div class="i-fullwidth-card-content">
+                        <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+                          <div class="i-divtable-row">
+                            <div class="i-divtable-cell i-center i-cellbox">
+                              <img class="i-cellheaderimg" src="./images/inrtloracle.png" alt="">
+                              <h6 class="i-h6">Oracle Cloud Enablers</h6>
+                              <p class="i-celltxt">Financial Reporting Structure Ledgers (Primary, Secondary & Reporting Ledgers)</p>
+                            </div>
+                            <div class="i-divtable-cell i-center i-cellbox">
+                              <img class="i-cellheaderimg" src="./images/inrtldeloitte.png" alt="">
+                              <h6 class="i-h6">Deloitte-Market Enablers</h6>
+                              <p class="i-celltxt">
+                                1. COA Mapping Tool <br>
+                                2. Hyperledger
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- FULL CARD -->
+                    <div class="i-fullwidth-card">
+                      <div class="i-fullwidth-card-header">
+                        <img class="i-fch-img" src="./images/analytics.png" alt="">
+                        <h5 class="i-fch-txt">Our Capabilities</h5>
+                        <h5 class="i-fch-txt i-fch-subtxt">Creating new possibilities at every step.</h5>
+                      </div>
+                      <div class="i-fullwidth-card-content">
+                        <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+                          <div class="i-divtable-row">
+                            <div class="i-divtable-cell i-center i-cellbox">
+                              <img class="i-cellheaderimg" src="./images/analytics0.png" alt="">
+                              <h6 class="i-h6">Analytics</h6>
+                              <p class="i-celltxt">FRS Reports and Smart Views can be used to generate required reports at enterprise level.</p>
+                            </div>
+                            <div class="i-divtable-cell i-center i-cellbox">
+                              <img class="i-cellheaderimg" src="./images/social.png" alt="">
+                              <h6 class="i-h6">Social Capability</h6>
+                              <p class="i-celltxt">
+                                Cloud Social Network for stream based real time conversation and web based document viewing.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- FULL CARD -->
+                    <div class="i-fullwidth-card">
+                      <div class="i-fullwidth-card-header">
+                        <img class="i-fch-img" src="./images/other_value.png" alt="">
+                        <h5 class="i-fch-txt">Our Leading Pracitices</h5>
+                        <h5 class="i-fch-txt i-fch-subtxt">Leading with examples since the beginning of our journey.</h5>
+                      </div>
+                      <div class="i-fullwidth-card-content">
+                        <div class="i-divtable i-divtable-fixedlayout i-divtable-spaced">
+                          <div class="i-divtable-row">
+                            <div class="i-divtable-cell i-center i-cellbox">
+                              <img class="i-cellheaderimg" src="./images/send.png" alt="">
+                              <h6 class="i-h6">Business Leading Practices</h6>
+                              <p class="i-celltxt">
+                                Consider the overall business structure and then decide on the CoA segments at which reporting is needed.<br>
+                                <br>
+                                Built the reporting structure keeping the below in mind: <br>
+                                <br>
+                                1. Functional Org Structure <br>
+                                2. Product Based Division Structure <br>
+                                3. Market Based Division Structure <br>
+                                4. Geographical Division Structure <br>
+                                5. Process Based <br>
+                                <br>
+                                Goverance process for Enterprise Structure Maintenance<br>
+                              </p>
+                            </div>
+                            <div class="i-divtable-cell i-center i-cellbox">
+                              <img class="i-cellheaderimg" src="./images/application.png" alt="">
+                              <h6 class="i-h6">Application Leading Practices</h6>
+                              <p class="i-celltxt">
+                                1. Single enterprise for the organization deploying the structure. <br><br>
+                                2. Define each registered organization has it own FEIN as a separate legal entity and assign a balancing segment value to each legal entity. <br><br>
+                                3. One primary ledger per currency. <br><br>
+                                4. Create single business unit per ledger. <br><br>
+                                5. Separate out business unit within a ledger if different areas of the business work in secure silos. <br><br>
+                                6. Distinct Requisition and Purchasing/Payment BUs to enable separating requisition function by business area, if needed in the future. <br><br>
+                                7. Create single inventory organization for indirect procurement items and receiving. <br><br>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- CONTENT 3 -->
             <div class="i-content-wrapper" id="i-content-wrapper-3">
