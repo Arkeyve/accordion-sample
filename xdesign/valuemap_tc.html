@@ -908,6 +908,14 @@
           }
         }
       }
+
+      var txt_list = document.getElementsByClassName('i-celltxt');
+      var txt_length = txt_list.length;
+      for(var i = 0; i < txt_length; i++) {
+        if(txt_list[i].innerText === "NULL") {
+          txt_list[i].parentElement.remove();
+        }
+      }
     });
   }
 </script>
