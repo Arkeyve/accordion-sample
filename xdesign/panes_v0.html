@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <style media="screen">
+    /*** OVERRIDE ***/
+    .OACHeaderPageTitleBar {
+      background-color: #000;
+    }
+
+    .masterBrandingArea {
+      display: none;
+    }
+
+    /*** BODY ****/
+    .i-html,
+    .i-body {
+      margin: 0px;
+      height: 100%;
+      font-family: opensans, Arial;
+      color: #222;
+      position: relative;
+      background-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fLanding_page_green_waves.png);
+      background-position: top center;
+      background-size: auto;
+      background-repeat: no-repeat;
+      min-height: 630px;
+    }
+
+    /*** FRAMEWORK ***/
+    .i-divtable {
+      box-sizing: border-box;
+      display: table;
+    }
+
+    .i-divtable-main {
+      padding: 0 10em;
+      width: 100%;
+    }
+
+    .i-divtable-fixedlayout {
+      table-layout: fixed;
+    }
+
+    .i-divtable-spaced {
+      border-spacing: 1em;
+    }
+
+    .i-divtable-row {
+      display: table-row;
+    }
+
+    .i-divtable-cell {
+      display: table-cell;
+    }
+
+    .i-center {
+      text-align: center;
+    }
+
+    .i-spacer-1em {
+      height: 1em;
+    }
+
+    .i-h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin: 0.67em 0;
+    }
+
+    .i-white {
+      color: #fff;
+    }
+
+    .i-main-wrapper {
+      box-sizing: border-box;
+      padding: 1em 6em;
+      display: none;
+      opacity: 0;
+      transition: 0.2s;
+    }
+
+    .i-panes-table {
+      width: 100%;
+      height: calc(80vh - 10em);
+    }
+
+    .i-panel {
+      background-color: #fff;
+    }
+
+    .i-panel:hover {
+      opacity: 1;
+    }
+
+    .i-panel-wrapper {
+
+    }
+
+    .i-graph-inlay {
+      height: 100%;
+      width: 100%;
+      opacity: 0.8;
+      transition: 0.4s;
+    }
+
+    .i-graph-inlay:hover {
+      opacity: 1;
+    }
+
+    .i-popup-wrapper {
+      position: absolute;
+      top: 0;
+      box-sizing: border-box;
+      padding: 6em;
+      background-color: rgba(0, 0, 0, 0.2);
+      height: 100%;
+      width: 100%;
+      display: none;
+      z-index: 9999;
+    }
+
+    .i-popup-table {
+      width: 100%;
+      height: 100%;
+      padding: 1em;
+      background-color: #fff;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .i-tab-menu {
+      position: absolute;
+      right: 0;
+      top: 3em;
+      height: calc(100vh - 5em);
+      width: 2em;
+    }
+
+    .i-tab-item {
+      text-orientation: inherit;
+      writing-mode: vertical-lr;
+      width: 2em;
+      padding: 0.4em;
+      box-sizing: border-box;
+      font-weight: 600;
+      background-color: #666;
+      color: #fff;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+
+    .i-tab-item:hover {
+      background-color: #333;
+    }
+
+    .i-tab-item-active {
+      background-color: #000;
+      transform: translate(-0.2em, 0);
+      -webkit-transform: translate(-0.2em, 0);
+      -moz-transform: translate(-0.2em, 0);
+      -ms-transform: translate(-0.2em, 0);
+      width: 2.2em;
+    }
+  </style>
+
+  <script src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js" type="text/javascript"></script>
+
+  <div class="i-body">
+
+    <div class="i-tab-menu">
+      <div class="i-tab-item i-tab-item-active" id="i-tab-selector-0">
+        Item 1
+      </div>
+      <div class="i-tab-item" id="i-tab-selector-1">
+        Item 2
+      </div>
+    </div>
+
+    <div class="i-main-wrapper" id="i-main-wrapper-0">
+      <div class="i-divtable i-divtable-main">
+        <div class="i-divtable-row i-center">
+          <div class="i-divtable-cell">
+            <h1 class="i-h1 i-white">Header</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="i-panel-wrapper">
+        <div class="i-divtable i-divtable-fixedlayout i-panes-table">
+          <div class="i-divtable-row">
+            <div class="i-divtable-cell i-panel" id="i-panel-00">
+              <div class="i-graph-inlay">
+                <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
+              </div>
+            </div>
+            <div class="i-divtable-cell i-panel" id="i-panel-01">
+              <div class="i-graph-inlay">
+                <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
+              </div>
+            </div>
+            <div class="i-divtable-cell i-panel" id="i-panel-02">
+              <div class="i-graph-inlay">
+                <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
+              </div>
+            </div>
+            <div class="i-divtable-cell i-panel" id="i-panel-03">
+              <div class="i-graph-inlay">
+                <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="i-main-wrapper" id="i-main-wrapper-1">
+      <div class="i-divtable i-divtable-main">
+        <div class="i-divtable-row i-center">
+          <div class="i-divtable-cell">
+            <h1 class="i-h1 i-white">Header 2</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="i-panel-wrapper">
+        <div class="i-divtable i-divtable-fixedlayout i-panes-table">
+          <div class="i-divtable-row">
+            <div class="i-divtable-cell i-panel" id="i-panel-10">
+              <div class="i-graph-inlay">
+                <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
+              </div>
+            </div>
+            <div class="i-divtable-cell i-panel" id="i-panel-11">
+              <div class="i-graph-inlay">
+                <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
+              </div>
+            </div>
+            <div class="i-divtable-cell i-panel" id="i-panel-12">
+              <div class="i-graph-inlay">
+                <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
+              </div>
+            </div>
+            <div class="i-divtable-cell i-panel" id="i-panel-13">
+              <div class="i-graph-inlay">
+                <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="i-popup-wrapper" id="i-popup-wrapper">
+      <div class="i-divtable i-divtable-fixedlayout i-popup-table" id="i-popup-00">
+        <div class="i-divtable-row">
+          <div class="i-divtable-cell i-popup">
+            <div class="i-graph-inlay">
+              <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="13" project-options='{"bShowFilterBar":false}'></oracle-dv>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    requirejs(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/oracle-dv/loader'], function(ko) {
+      ko.applyBindings();
+    });
+  </script>
+  <script type="text/javascript">
+    document.getElementById('i-main-wrapper-0').style.display = "block";
+    document.getElementById('i-main-wrapper-0').style.opacity = 1;
+
+    var panels = document.getElementsByClassName("i-panel");
+    for(var i = 0; i < panels.length; i++) {
+      panels[i].addEventListener("click", function() {
+        document.getElementById('i-popup-wrapper').style.display = "block";
+        document.getElementById('i-popup-wrapper').style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+        var target_id = this.id.split("i-panel-")[1];
+        setTimeout(function() {
+          document.getElementById('i-popup-' + target_id) ? document.getElementById('i-popup-' + target_id).style.opacity = 1 : undefined;
+        }, 1);
+      });
+    }
+
+    var popup_clicked = false;
+    var hide_popup = function() {
+      setTimeout(function() {
+        if(!popup_clicked) {
+          document.getElementById('i-popup-00').style.opacity = 0;
+          document.getElementById('i-popup-wrapper').style.backgroundColor = 'rgba(0, 0, 0, 0)';
+          setTimeout(function() {
+            document.getElementById('i-popup-wrapper').style.display = "none";
+          }, 400);
+        }
+        popup_clicked = false;
+      }, 2);
+    }
+
+    document.getElementById('i-popup-wrapper').addEventListener("click", function() {
+      hide_popup();
+    });
+
+    document.getElementById('i-popup-00').addEventListener("click", function() {
+      popup_clicked = true;
+    });
+
+    try {
+      //*** OVERRIDE ***//
+      document.getElementById('idHeaderTitleCell').innerText = "";
+      document.getElementsByClassName('pageLogo')[0].src = "https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png";
+      document.getElementsByClassName('pageLogo')[0].style.width = "auto";
+
+      var add_link = function(id, label, url) {
+        var header_row = document.getElementsByClassName('HeaderMenubar')[0].children[0].children[0].children[0];
+        var tdata = document.createElement("td");
+        // <span id="home" class="masterMenuButton masterMenuButtonGlobal OACMasterMenuButtonText uberBarTextMenuButtonSpan" role="button" aria-label="Home" tabindex="0"></span>
+        var span1 = document.createElement("span");
+        span1.id = id;
+        span1.classList.add("masterMenuButton");
+        span1.classList.add("masterMenuButtonGlobal");
+        span1.classList.add("OACMasterMenuButtonText");
+        span1.classList.add("uberBarTextMenuButtonSpan");
+        span1.addEventListener("click", function() {
+          window.location = url;
+        });
+        span1.style.cursor = "pointer";
+        span1.setAttribute("role", "button");
+        span1.setAttribute("aria-label", label);
+        // <span class="HeaderMenuBarText HeaderMenuNavBarText" role="presentation"></span>
+        var span2 = document.createElement("span");
+        span2.classList.add("HeaderMenuBarText");
+        span2.classList.add("HeaderMenuNavBarText");
+        span2.setAttribute("role", "presentation");
+        // <span role="presentation">Home</span>
+        var span3 = document.createElement("span");
+        span3.setAttribute("role", "presentation");
+        span3.innerText = label;
+        // adding to page
+        span2.appendChild(span3);
+        span1.appendChild(span2);
+        tdata.appendChild(span1);
+        header_row.appendChild(tdata);
+      }
+
+      add_link('i-faq', 'FAQ', '');
+      add_link('i-report', 'Report a Bug', 'https://amway.service-now.com/nav_to.do?uri=%2Fincident.do%3Fsys_id%3D-1%26sysparm_query%3Dactive%3Dtrue%26sysparm_stack%3Dincident_list.do%3Fsysparm_query%3Dactive%3Dtrue');
+    } catch (err) {
+      console.log('Ignoring the following error on override block:\n' + err);
+    }
+  </script>
+</body>
+
+</html>

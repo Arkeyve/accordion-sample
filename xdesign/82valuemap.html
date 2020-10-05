@@ -1,3 +1,5 @@
+
+
 <!-- https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fLanding_page_green_waves.png -->
 <style media="screen">
   /*** OVERRIDE ***/
@@ -583,21 +585,21 @@
               Value Driver:
             </span>
             <span class="i-breadcrumbs-value" id="i-bc-v0">
-              Expectations
+              @{value_driver}
             </span>
             <span class="i-breadcrumbs-separator">>></span>
             <span class="i-breadcrumbs-header" id="i-bc-h1">
               Sub Driver:
             </span>
             <span class="i-breadcrumbs-value" id="i-bc-v1">
-              Receivables & Payables
+              @{value_sub_driver}
             </span>
             <span class="i-breadcrumbs-separator">>></span>
             <span class="i-breadcrumbs-header" id="i-bc-h2">
               Lever:
             </span>
             <span class="i-breadcrumbs-value" id="i-bc-v2">
-              Improve Shared Service Efficiency
+              @{lever}
             </span>
             <span class="i-breadcrumbs-separator">>></span>
           </div>
@@ -651,8 +653,7 @@
                       <h5 class="i-fch-txt">Value Opportunity Sub Levers</h5>
                     </div>
                     <div class="i-fullwidth-card-content">
-                      1. Enable Continuous close at corporate level <br>
-                      2. Minimise the manual accounting entries
+                      @{Value_Opportunity}{No Results}
                     </div>
                   </div>
                   <!-- FULL CARD -->
@@ -662,75 +663,9 @@
                       <h5 class="i-fch-txt">Quantifying your Potential Value Opportunities</h5>
                     </div>
                     <div class="i-fullwidth-card-content">
-                      <table class="i-table">
-                        <tr class="i-tr">
-                          <th class="i-th">Category</th>
-                          <th class="i-th">KPI</th>
-                          <th class="i-th">Industry Benchmark</th>
-                          <th class="i-th">Potential Opportunity</th>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td">Close Cycle Times</td>
-                          <td class="i-td">Time to Close</td>
-                          <td class="i-td">10 days</td>
-                          <td class="i-td">10-20% improvement during close cycle time</td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td" colspan="4">
-                            <hr class="i-hr">
-                          </td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td">Close Cycle Times</td>
-                          <td class="i-td">Time to Close</td>
-                          <td class="i-td">10 days</td>
-                          <td class="i-td">10-20% improvement during close cycle time</td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td" colspan="4">
-                            <hr class="i-hr">
-                          </td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td">Close Cycle Times</td>
-                          <td class="i-td">Time to Close</td>
-                          <td class="i-td">10 days</td>
-                          <td class="i-td">10-20% improvement during close cycle time</td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td" colspan="4">
-                            <hr class="i-hr">
-                          </td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td">Close Cycle Times</td>
-                          <td class="i-td">Time to Close</td>
-                          <td class="i-td">10 days</td>
-                          <td class="i-td">10-20% improvement during close cycle time</td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td" colspan="4">
-                            <hr class="i-hr">
-                          </td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td">Close Cycle Times</td>
-                          <td class="i-td">Time to Close</td>
-                          <td class="i-td">10 days</td>
-                          <td class="i-td">10-20% improvement during close cycle time</td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td" colspan="4">
-                            <hr class="i-hr">
-                          </td>
-                        </tr>
-                        <tr class="i-tr">
-                          <td class="i-td">Close Cycle Times</td>
-                          <td class="i-td">Time to Close</td>
-                          <td class="i-td">10 days</td>
-                          <td class="i-td">10-20% improvement during close cycle time</td>
-                        </tr>
-                      </table>
+                      <span noremove=""></span>
+                      <iframe frameborder="0" MARGINWIDTH="0"  MARGINHEIGHT="0" scrolling="no" width="100%" height="600"   src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/analytics/saw.dll?Dashboard&PortalPath=%2Fshared%2FO2%20FMO%20Value%20Map%2F_portal%2FO2%20FMO%20Value%20Map&Page=Potential_Value_Opportunity&Action=Navigate&col1=%22Value%20Map%22.%22Track%22&val1=@{track}&col2=%22Value%20Map%22.%22L2%20Process%22&val2=%22@{L2_process}%22&col3=%22Value%20Map%22.%22L3%20Process%22&val3=%22@{L3_process}%22"></iframe>
+
                     </div>
                   </div>
                   <!-- FULL CARD -->
@@ -765,14 +700,13 @@
                           <div class="i-divtable-cell i-center i-cellbox">
                             <img class="i-cellheaderimg" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2finrtloracle.png" alt="">
                             <h6 class="i-h6">Oracle Cloud Enablers</h6>
-                            <p class="i-celltxt">Financial Reporting Structure Ledgers (Primary, Secondary & Reporting Ledgers)</p>
+                            <p class="i-celltxt">@{oracle_cloud_enabler}{No Results}</p>
                           </div>
                           <div class="i-divtable-cell i-center i-cellbox">
                             <img class="i-cellheaderimg" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2finrtldeloitte.png" alt="">
                             <h6 class="i-h6">Deloitte-Market Enablers</h6>
                             <p class="i-celltxt">
-                              1. COA Mapping Tool <br>
-                              2. Hyperledger
+                             @{Deloitte_Market_Enablers}{No Results}
                             </p>
                           </div>
                         </div>
@@ -792,13 +726,13 @@
                           <div class="i-divtable-cell i-center i-cellbox">
                             <img class="i-cellheaderimg" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fanalytics0.png" alt="">
                             <h6 class="i-h6">Analytics</h6>
-                            <p class="i-celltxt">FRS Reports and Smart Views can be used to generate required reports at enterprise level.</p>
+                            <p class="i-celltxt">@{Analytics}{No Results}</p>
                           </div>
                           <div class="i-divtable-cell i-center i-cellbox">
                             <img class="i-cellheaderimg" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fsocial.png" alt="">
                             <h6 class="i-h6">Social Capability</h6>
                             <p class="i-celltxt">
-                              Cloud Social Network for stream based real time conversation and web based document viewing.
+                              @{Social_Capability}{No Results}
                             </p>
                           </div>
                         </div>
@@ -819,30 +753,14 @@
                             <img class="i-cellheaderimg" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fsend.png" alt="">
                             <h6 class="i-h6">Business Leading Practices</h6>
                             <p class="i-celltxt">
-                              Consider the overall business structure and then decide on the CoA segments at which reporting is needed.<br>
-                              <br>
-                              Built the reporting structure keeping the below in mind: <br>
-                              <br>
-                              1. Functional Org Structure <br>
-                              2. Product Based Division Structure <br>
-                              3. Market Based Division Structure <br>
-                              4. Geographical Division Structure <br>
-                              5. Process Based <br>
-                              <br>
-                              Goverance process for Enterprise Structure Maintenance<br>
+                              @{Business_Leading_Practice}{No Results}
                             </p>
                           </div>
                           <div class="i-divtable-cell i-center i-cellbox">
                             <img class="i-cellheaderimg" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fapplication.png" alt="">
                             <h6 class="i-h6">Application Leading Practices</h6>
                             <p class="i-celltxt">
-                              1. Single enterprise for the organization deploying the structure. <br><br>
-                              2. Define each registered organization has it own FEIN as a separate legal entity and assign a balancing segment value to each legal entity. <br><br>
-                              3. One primary ledger per currency. <br><br>
-                              4. Create single business unit per ledger. <br><br>
-                              5. Separate out business unit within a ledger if different areas of the business work in secure silos. <br><br>
-                              6. Distinct Requisition and Purchasing/Payment BUs to enable separating requisition function by business area, if needed in the future. <br><br>
-                              7. Create single inventory organization for indirect procurement items and receiving. <br><br>
+                              @{Application_Leading_Practices}{No Results}
                             </p>
                           </div>
                         </div>
@@ -929,5 +847,49 @@
         }
       }
     });
+  }
+
+  try {
+    //*** OVERRIDE ***//
+    document.getElementById('idHeaderTitleCell').innerText = "";
+    document.getElementsByClassName('pageLogo')[0].src = "https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png";
+    document.getElementsByClassName('pageLogo')[0].style.width = "auto";
+
+    var add_link = function(id, label, url) {
+      var header_row = document.getElementsByClassName('HeaderMenubar')[0].children[0].children[0].children[0];
+      var tdata = document.createElement("td");
+      // <span id="home" class="masterMenuButton masterMenuButtonGlobal OACMasterMenuButtonText uberBarTextMenuButtonSpan" role="button" aria-label="Home" tabindex="0"></span>
+      var span1 = document.createElement("span");
+      span1.id = id;
+      span1.classList.add("masterMenuButton");
+      span1.classList.add("masterMenuButtonGlobal");
+      span1.classList.add("OACMasterMenuButtonText");
+      span1.classList.add("uberBarTextMenuButtonSpan");
+      span1.addEventListener("click", function() {
+        window.location = url;
+      });
+      span1.style.cursor = "pointer";
+      span1.setAttribute("role", "button");
+      span1.setAttribute("aria-label", label);
+      // <span class="HeaderMenuBarText HeaderMenuNavBarText" role="presentation"></span>
+      var span2 = document.createElement("span");
+      span2.classList.add("HeaderMenuBarText");
+      span2.classList.add("HeaderMenuNavBarText");
+      span2.setAttribute("role", "presentation");
+      // <span role="presentation">Home</span>
+      var span3 = document.createElement("span");
+      span3.setAttribute("role", "presentation");
+      span3.innerText = label;
+      // adding to page
+      span2.appendChild(span3);
+      span1.appendChild(span2);
+      tdata.appendChild(span1);
+      header_row.appendChild(tdata);
+    }
+
+    add_link('i-faq', 'FAQ', '');
+    add_link('i-report', 'Report a Bug', 'https://amway.service-now.com/nav_to.do?uri=%2Fincident.do%3Fsys_id%3D-1%26sysparm_query%3Dactive%3Dtrue%26sysparm_stack%3Dincident_list.do%3Fsysparm_query%3Dactive%3Dtrue');
+  } catch (err) {
+    console.log('Ignoring the following error on override block:\n' + err);
   }
 </script>

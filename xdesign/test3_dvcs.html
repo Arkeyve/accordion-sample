@@ -220,8 +220,8 @@
   }
 
   .i-transition-box {
-    width: 25em;
-    height: 20em;
+    width: 20em;
+    height: 25em;
     background-color: #fff;
     background-image: url(https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fCard_bg.png);
     background-repeat: no-repeat;
@@ -261,7 +261,7 @@
   .i-graph-overlay {
     z-index: 9999999;
     position: absolute;
-    height: 15em;
+    height: 100%;
     width: 19em;
     top: 0em;
     left: 0em;
@@ -271,14 +271,14 @@
   }
 
   .i-graph-overlay:hover {
-    height: 32em;
+    height: 200%;
     width: 37em;
     top: -8.5em;
     left: -9.5em;
   }
 
   .i-graph-inlay {
-    height: 13.3em;
+    height: 100%;
     width: 16.5em;
     position: absolute;
     top: 0;
@@ -286,7 +286,7 @@
   }
 
   .i-graph-inlay-fg {
-    height: 15.1em;
+    height: 100%;
     width: 19em;
   }
 
@@ -297,7 +297,7 @@
 
 <div class="i-body">
   <!-- NAVBAR -->
-  <div class="i-navbar">
+  <!-- <div class="i-navbar">
     <img id="i-navbar-logo" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png" alt="Deloitte.">
     <div class="i-navbar-itemlist">
       <a href="#" class="i-navbar-link">Home</a>
@@ -305,7 +305,7 @@
       <a href="#" class="i-navbar-link">Report a Bug</a>
       <a href="#" class="i-navbar-link">FAQ</a>
     </div>
-  </div>
+  </div> -->
 
   <!-- MAIN -->
   <div class="i-main-wrapper">
@@ -398,7 +398,7 @@
             </div>
           </div>
           <!-- CARD-FG -->
-          <div class="i-divtable i-fg-content" onclick="window.location='./evm.html'">
+          <div class="i-divtable i-fg-content" onclick="window.location='https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/dv/?pageid=visualAnalyzer&reportmode=full&reportpath=%2F%40Catalog%2Fshared%2FDigital%20Finance%20-%20O2%2FCollections%2FReceivable%20Prediction%20Analysis'">
             <div class="i-divtable-row">
               <div class="i-divtable-cell i-valign-middle i-white">
                 Understanding value levers that directly support the strategic drivers of the business.
@@ -418,7 +418,7 @@
               <div class="i-divtable-cell i-valign-top">
                 <script src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/public/dv/v1/embedding/standalone/embedding.js" type="text/javascript"></script>
                 <div class="i-graph-inlay">
-                  <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="13" project-options='{"bShowFilterBar":false}'></oracle-dv>
+                  <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="14" project-options='{"bShowFilterBar":false}'></oracle-dv>
                 </div>
                 <!-- <script>requirejs(['knockout', 'ojs/ojcore', 'ojs/ojknockout', 'ojs/ojcomposite', 'jet-composites/oracle-dv/loader'], function(ko) {   ko.applyBindings(); });</script> -->
               </div>
@@ -452,7 +452,7 @@
             <div class="i-divtable-row">
               <div class="i-divtable-cell i-valign-middle i-white">
                 <div class="i-graph-inlay i-graph-inlay-fg">
-                  <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="13" project-options='{"bShowFilterBar":false}'></oracle-dv>
+                  <oracle-dv project-path="/@Catalog/shared/Digital Finance - O2/Collections/Receivable Prediction Analysis" active-page="canvas" active-tab-id="15" project-options='{"bShowFilterBar":false}'></oracle-dv>
                 </div>
               </div>
             </div>
@@ -493,4 +493,52 @@
   });
 </script>
 <script type="text/javascript">
+  var inlays = document.getElementsByClassName('i-graph-inlay');
+  for(var i = 0; i < inlays.length; i++) {
+    var parent_width = document.getElementsByClassName('i-transition-box')[0].offsetWidth;
+    inlays[i].style.width = parent_width + "px";
+  }
+
+  document.getElementById('idHeaderTitleCell').innerText = "";
+  document.getElementsByClassName('pageLogo')[0].src = "https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png";
+  document.getElementsByClassName('pageLogo')[0].style.width = "auto";
+
+  var add_link = function(id, label, url) {
+    var header_row = document.getElementsByClassName('HeaderMenubar')[0].children[0].children[0].children[0];
+    var tdata = document.createElement("td");
+    // <span id="home" class="masterMenuButton masterMenuButtonGlobal OACMasterMenuButtonText uberBarTextMenuButtonSpan" role="button" aria-label="Home" tabindex="0"></span>
+    var span1 = document.createElement("span");
+    span1.id = id;
+    span1.classList.add("masterMenuButton");
+    span1.classList.add("masterMenuButtonGlobal");
+    span1.classList.add("OACMasterMenuButtonText");
+    span1.classList.add("uberBarTextMenuButtonSpan");
+    span1.addEventListener("click", function() { window.location = url; });
+    span1.style.cursor = "pointer";
+    span1.setAttribute("role", "button");
+    span1.setAttribute("aria-label", label);
+    // <span class="HeaderMenuBarText HeaderMenuNavBarText" role="presentation"></span>
+    var span2 = document.createElement("span");
+    span2.classList.add("HeaderMenuBarText");
+    span2.classList.add("HeaderMenuNavBarText");
+    span2.setAttribute("role", "presentation");
+    // <span role="presentation">Home</span>
+    var span3 = document.createElement("span");
+    span3.setAttribute("role", "presentation");
+    span3.innerText = label;
+    // adding to page
+    span2.appendChild(span3);
+    span1.appendChild(span2);
+    tdata.appendChild(span1);
+    header_row.appendChild(tdata);
+  }
+
+  add_link('i-faq', 'FAQ', '');
+  add_link('i-report', 'Report a Bug', 'https://amway.service-now.com/nav_to.do?uri=%2Fincident.do%3Fsys_id%3D-1%26sysparm_query%3Dactive%3Dtrue%26sysparm_stack%3Dincident_list.do%3Fsysparm_query%3Dactive%3Dtrue');
+
+  // var overlays = document.getElementsByClassName('i-graph-overlay');
+  // for(var i = 0; i < overlays.length; i++) {
+  //   var parent_width = document.getElementsByClassName('i-transition-box')[0].offsetWidth * 2;
+  //   overlays[i].style.width = parent_width + "px";
+  // }
 </script>

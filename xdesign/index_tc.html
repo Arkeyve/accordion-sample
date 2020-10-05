@@ -258,7 +258,7 @@
 
 <div class="i-body">
   <!-- NAVBAR -->
-  <div class="i-navbar">
+  <!-- <div class="i-navbar">
     <img id="i-navbar-logo" src="https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png" alt="Deloitte.">
     <div class="i-navbar-itemlist">
       <a href="#" class="i-navbar-link">Home</a>
@@ -266,7 +266,7 @@
       <a href="#" class="i-navbar-link">Report a Bug</a>
       <a href="#" class="i-navbar-link">FAQ</a>
     </div>
-  </div>
+  </div> -->
 
   <!-- MAIN -->
   <div class="i-main-wrapper">
@@ -359,7 +359,7 @@
             </div>
           </div>
           <!-- CARD-FG -->
-          <div class="i-divtable i-fg-content" onclick="window.location='./evm.html'">
+          <div class="i-divtable i-fg-content" onclick="window.location='https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/analytics/saw.dll?Dashboard&PortalPath=%2Fshared%2FO2%20FMO%20Value%20Map%2F_portal%2FO2%20FMO%20Value%20Map&Page=8.1%20Value%20Map&PageIdentifier=40lnch3kube50rsf&BookmarkState=p9io7insu0p59q8alub0ic9caa'">
             <div class="i-divtable-row">
               <div class="i-divtable-cell i-valign-middle i-white">
                 Understanding value levers that directly support the strategic drivers of the business.
@@ -442,5 +442,47 @@
 </div>
 
 <script type="text/javascript">
+    try {
+      //*** OVERRIDE ***//
+      document.getElementById('idHeaderTitleCell').innerText = "";
+      document.getElementsByClassName('pageLogo')[0].src = "https://daoacdev-nacaus19b-ia.analytics.ocp.oraclecloud.com/ui/analytics/saw.dll?downloadFile&Path=%2fshared%2fcustom%2fimages%2fdeloitte_w.png";
+      document.getElementsByClassName('pageLogo')[0].style.width = "auto";
 
+      var add_link = function(id, label, url) {
+        var header_row = document.getElementsByClassName('HeaderMenubar')[0].children[0].children[0].children[0];
+        var tdata = document.createElement("td");
+        // <span id="home" class="masterMenuButton masterMenuButtonGlobal OACMasterMenuButtonText uberBarTextMenuButtonSpan" role="button" aria-label="Home" tabindex="0"></span>
+        var span1 = document.createElement("span");
+        span1.id = id;
+        span1.classList.add("masterMenuButton");
+        span1.classList.add("masterMenuButtonGlobal");
+        span1.classList.add("OACMasterMenuButtonText");
+        span1.classList.add("uberBarTextMenuButtonSpan");
+        span1.addEventListener("click", function() {
+          window.location = url;
+        });
+        span1.style.cursor = "pointer";
+        span1.setAttribute("role", "button");
+        span1.setAttribute("aria-label", label);
+        // <span class="HeaderMenuBarText HeaderMenuNavBarText" role="presentation"></span>
+        var span2 = document.createElement("span");
+        span2.classList.add("HeaderMenuBarText");
+        span2.classList.add("HeaderMenuNavBarText");
+        span2.setAttribute("role", "presentation");
+        // <span role="presentation">Home</span>
+        var span3 = document.createElement("span");
+        span3.setAttribute("role", "presentation");
+        span3.innerText = label;
+        // adding to page
+        span2.appendChild(span3);
+        span1.appendChild(span2);
+        tdata.appendChild(span1);
+        header_row.appendChild(tdata);
+      }
+
+      add_link('i-faq', 'FAQ', '');
+      add_link('i-report', 'Report a Bug', 'https://amway.service-now.com/nav_to.do?uri=%2Fincident.do%3Fsys_id%3D-1%26sysparm_query%3Dactive%3Dtrue%26sysparm_stack%3Dincident_list.do%3Fsysparm_query%3Dactive%3Dtrue');
+    } catch (err) {
+      console.log('Ignoring the following error on override block:\n' + err);
+    }
 </script>
